@@ -1,5 +1,5 @@
 // import { Box, useTheme, useMediaQuery } from "@mui/material";
-// import style from "../../styles/Home.module.css";
+// import style from "../../styles/Home.module.scss";
 // import Banner from "./Banner";
 // import Companies from "./Companies";
 // import Help from "./help";

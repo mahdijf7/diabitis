@@ -2,7 +2,7 @@ import { useMediaQuery, useTheme, Container } from "@mui/material";
 import CustomDrawer from "./CustomDrawer";
 import CustomNavbar from "./CustomNavbar";
 // import t from "../../../public/locales/defualt/common.json";
-// import style from "../../../styles/Header.module.css";
+// import style from "../../../styles/Header.module.scss";
 
 export default function Header() {
   const theme = useTheme();

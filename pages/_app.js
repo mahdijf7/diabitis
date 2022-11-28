@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import Layouts from "../components/layouts";
 import Theme from "../assets/theme";
 import { ThemeProvider, useMediaQuery, CssBaseline } from "@mui/material";
