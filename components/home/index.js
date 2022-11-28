@@ -6,8 +6,16 @@
 // import ImageTitle from "./ImageTitle";
 // import ImageTitleMini from "./ImageTitleMini";
 
+import MultiplePagesCrousel from "../carousel/MultiplePages";
+import SinglePageCrousel from "../carousel/SinglePage";
+
 export default function Home() {
   // const theme = useTheme();
   // const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  return <></>;
+  return (
+    <>
+      <SinglePageCrousel />
+      <MultiplePagesCrousel />
+    </>
+  );
 }
