@@ -2,17 +2,17 @@ export const lightMode = {
   palette: {
     mode: "light",
     primary: {
-      main: "#F7C906",
-      light: "#EDFBFF",
-      dark: "#C6F4FF",
+      main: "#FED453",
+      light: "",
+      dark: "",
     },
     secondary: {
-      main: "#063775",
-      light: "#0877BD",
-      dark: "#16255B",
+      main: "#45A9A3",
+      light: "#45A9A399",
+      dark: "",
     },
     gray: {
-      main: "#F2F2F2",
+      main: "",
     },
     // info: {
     //   main: lighter,
@@ -28,10 +28,10 @@ export const lightMode = {
       black: "#000000",
     },
     text: {
-      primary: "#16255B",
-      secondary: "#0877BD",
-      hint: "#063775B2",
-      primaryChannel: "#063775",
+      primary: "#1C2453",
+      secondary: "#080D28",
+      hint: "#1E6F6A",
+      primaryChannel: "#163432",
       // secondaryChannel: "#004D88",
     },
     background: {
@@ -43,17 +43,17 @@ export const darkMode = {
   palette: {
     mode: "dark",
     primary: {
-      main: "#F7C906",
-      light: "#EDFBFF",
-      dark: "#C6F4FF",
+      main: "#FED453",
+      light: "",
+      dark: "",
     },
     secondary: {
-      main: "#063775",
-      light: "#0877BD",
-      dark: "#16255B",
+      main: "#45A9A3",
+      light: "#45A9A399",
+      dark: "",
     },
     gray: {
-      main: "#F2F2F2",
+      main: "",
     },
     // info: {
     //   main: lighter,
@@ -69,14 +69,14 @@ export const darkMode = {
       black: "#000000",
     },
     text: {
-      primary: "#16255B",
-      secondary: "#0877BD",
-      hint: "#063775B2",
+      primary: "#1C2453",
+      secondary: "#080D28",
+      hint: "#1E6F6A",
+      primaryChannel: "#163432",
+      // secondaryChannel: "#004D88",
     },
     background: {
       default: "#F5F5F5",
     },
   },
-
-  overrides: {},
 };

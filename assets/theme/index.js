@@ -5,70 +5,73 @@ import { createTheme } from "@mui/material";
 const overrides = {
   typography: {
     h1: {
-      fontSize: "40px",
-      fontWeight: "700",
-      lineHeight: "55px",
+      fontSize: "30px",
+      fontWeight: "500",
+      lineHeight: "46.96px",
     },
     h2: {
-      fontSize: "30px",
+      fontSize: "22px",
       fontWeight: "700",
-      lineHeight: "45px",
+      lineHeight: "34.43px",
     },
     h3: {
-      fontSize: "28px",
-      fontWeight: "700",
-      lineHeight: "32px",
+      fontSize: "22px",
+      fontWeight: "400",
+      lineHeight: "50px",
     },
     h4: {
       fontSize: "20px",
       fontWeight: "700",
+      lineHeight: "31.3px",
     },
     h5: {
-      fontSize: "22px",
-      fontWeight: "700",
+      fontSize: "20px",
+      fontWeight: "500",
+      lineHeight: "31.3px",
     },
     h6: {
       fontSize: "20px",
-      fontWeight: "900",
-    },
-    body1: {
-      fontSize: "18px",
-      fontWeight: "700",
-    },
-    body2: {
-      fontSize: "16px",
-      fontWeight: "700",
-    },
-    body3: {
-      fontSize: "18px",
-      fontWeight: "500",
+      fontWeight: "400",
       lineHeight: "40px",
     },
+    // body1: {
+    //   fontSize: "18px",
+    //   fontWeight: "500",
+    // },
+    // body2: {
+    //   fontSize: "",
+    //   fontWeight: "",
+    // },
+    // body3: {
+    //   fontSize: "",
+    //   fontWeight: "",
+    //   lineHeight: "",
+    // },
     body4: {
-      fontSize: "18px",
-      fontWeight: "400",
-      lineHeight: "28px",
-    },
-    subtitle1: {
-      fontSize: "20px",
+      fontSize: "14px",
       fontWeight: "500",
     },
-    subtitle2: {
-      fontSize: "20px",
+    subtitle1: {
+      fontSize: "18px",
       fontWeight: "400",
+    },
+    subtitle2: {
+      fontSize: "18px",
+      fontWeight: "300",
     },
     subtitle3: {
       fontSize: "16px",
       fontWeight: "400",
-      lineHeight: "35px",
     },
     subtitle4: {
-      fontSize: "14px",
-      fontWeight: "400",
+      fontSize: "16px",
+      fontWeight: "300",
+      lineHeight: "25.04px",
     },
     subtitle5: {
-      fontSize: "12px",
-      fontWeight: "500",
+      fontSize: "14px",
+      fontWeight: "400",
+      lineHeight: "21.91px",
     },
     fontFamily: `"IRANSans", "sans-serif", "serif" `,
     fontWeightLight: 300,
@@ -86,9 +89,8 @@ const overrides = {
     },
   },
   customShadows: {
-    widget: "0px -4px 20px 0px #06377533",
-    // widgetDark:
-    //   "",
+    widget: "0px 0px 10px 5px #1C24531A",
+    widgetDark: "0px 0px 10px 5px rgba(28, 36, 83, 0.1)",
     // widgetWide:
     //   "",
   },
