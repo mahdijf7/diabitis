@@ -3,16 +3,16 @@ export const lightMode = {
     mode: "light",
     primary: {
       main: "#FED453",
-      light: "",
-      dark: "",
+      // light: "",
+      // dark: "",
     },
     secondary: {
       main: "#45A9A3",
       light: "#45A9A399",
-      dark: "",
+      // dark: "",
     },
     gray: {
-      main: "",
+      main: "#EDEBEB",
     },
     // info: {
     //   main: lighter,
@@ -44,16 +44,16 @@ export const darkMode = {
     mode: "dark",
     primary: {
       main: "#FED453",
-      light: "",
-      dark: "",
+      light: "#EDEBEB",
+      // dark: "",
     },
     secondary: {
       main: "#45A9A3",
       light: "#45A9A399",
-      dark: "",
+      // dark: "",
     },
     gray: {
-      main: "",
+      main: "#EDEBEB",
     },
     // info: {
     //   main: lighter,

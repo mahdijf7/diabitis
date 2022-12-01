@@ -1,10 +1,75 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import style from "../../styles/Carousel.module.scss";
-
+import t from "../../public/locales/defualt/common.json";
 const SinglePage = () => {
   const [slideIndex, setSlideIndex] = useState(1);
-  const slides = ["/images/t1.jpg", "/images/t2.jpg", "/images/t3.jpg"];
+  const CreateText = ({ title, listTitle }) => {
+    return (
+      <>
+        <Typography
+          sx={{ typography: { md: "h2", lg: "h1" } }}
+          color="common.white"
+          component="h1"
+          pb="15px"
+        >
+          {title}
+        </Typography>
+        {listTitle.map((el, index) => (
+          <Typography
+            sx={{ typography: { md: "subtitle1", lg: "h6" } }}
+            color="common.white"
+            component="h1"
+            key={index}
+          >
+            {el}
+          </Typography>
+        ))}
+      </>
+    );
+  };
+  const slides = [
+    {
+      img: "/images/home/banner1.svg",
+      text: (
+        <CreateText
+          title={t.home.childTitle}
+          listTitle={[
+            t.home.childDes1,
+            t.home.childDes2,
+            t.home.childDes3,
+            t.home.childDes4,
+          ]}
+        />
+      ),
+    },
+    {
+      img: "/images/home/banner2.svg",
+      text: (
+        <CreateText title={t.home.failed} listTitle={[t.home.failedDes1]} />
+      ),
+    },
+    {
+      img: "/images/home/banner1.svg",
+      text: (
+        <CreateText
+          title={t.home.childTitle}
+          listTitle={[
+            t.home.childDes1,
+            t.home.childDes2,
+            t.home.childDes3,
+            t.home.childDes4,
+          ]}
+        />
+      ),
+    },
+    {
+      img: "/images/home/banner2.svg",
+      text: (
+        <CreateText title={t.home.childTitle} listTitle={[t.home.failedDes1]} />
+      ),
+    },
+  ];
 
   useEffect(() => {
     // save intervalId to clear the interval when the
@@ -19,34 +84,44 @@ const SinglePage = () => {
     // when we update it
   }, [slideIndex]);
 
-  //   const currentSlide = (n) => {
-  //     if (n > slides.length) {
-  //       setSlideIndex(1);
-  //     } else if (n < 1) {
-  //       setSlideIndex(slides.length);
-  //     } else {
-  //       setSlideIndex(n);
-  //     }
-  //   };
-
   return (
     <Box>
+      <Box
+        className={`${style.fade} ${style.boxCoverBanner}`}
+        bgcolor="secondary.light"
+      >
+        {slides[slideIndex - 1].text}
+      </Box>
       {slides.map((el, index) => (
         <Box
           key={index}
           className={style.fade}
           style={{ display: slideIndex == index + 1 ? "block" : "none" }}
         >
-          <img src={el} style={{ width: "100%" }} />
+          <img src={el.img} style={{ width: "100%" }} />
         </Box>
       ))}
-      <Box position="absolute" mt="-45px" mr="40px">
+      <Box
+        position="absolute"
+        mt="-45px"
+        mr="40px"
+        height="30px"
+        display="flex"
+        alignItems="center"
+      >
         {slides.map((el, index) => (
           <Box
             key={index}
-            className={style.dot}
-            style={{
-              backgroundColor: slideIndex == index + 1 ? "green" : "red",
+            bgcolor={slideIndex == index + 1 ? "common.white" : "gray.main"}
+            sx={{
+              width: slideIndex == index + 1 ? "12px" : "7px",
+              height: slideIndex == index + 1 ? "12px" : "7px",
+              borderRadius: "50%",
+              cursor: "pointer",
+              mx: "4px",
+              display: "inline-block",
+              transition: "0.6s ease",
+              //transition: width 2s, height 4s;
             }}
             onClick={() => setSlideIndex(index + 1)}
           />
