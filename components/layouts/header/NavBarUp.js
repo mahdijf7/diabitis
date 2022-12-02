@@ -1,8 +1,7 @@
 import CustomButton from "../../utiles/CustomButton";
 import t from "../../../public/locales/defualt/common.json";
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Grid, IconButton, Typography } from "@mui/material";
 import Image from "next/image";
-import logo from "../../../public/images/logo.svg";
 import Link from "next/link";
 
 const NavBarUp = () => {
@@ -16,9 +15,14 @@ const NavBarUp = () => {
         justifyContent="flex-start"
       >
         <Link href="/">
-          <Button>
-            <Image src={logo} style={{ cursor: "pointer" }} />
-          </Button>
+          <IconButton>
+            <Image
+              src={"/images/logo.svg"}
+              width="41px"
+              height="42px"
+              style={{ cursor: "pointer" }}
+            />
+          </IconButton>
         </Link>
         <Typography
           component="h1"

@@ -12,6 +12,8 @@ const CustomButton = ({
   font =
     font == "small"
       ? { typography: { md: "subtitle3", lg: "body1" } }
+      : font == "mini"
+      ? { typography: { xs: "subtitle6", sm: "subtitle5" } }
       : { typography: { md: "body2", lg: "h4" } };
 
   return (

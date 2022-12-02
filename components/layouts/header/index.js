@@ -2,12 +2,27 @@ import { useMediaQuery, useTheme, Container } from "@mui/material";
 import CustomDrawer from "./CustomDrawer";
 import CustomNavbar from "./CustomNavbar";
 import t from "../../../public/locales/defualt/common.json";
+import { useEffect, useState } from "react";
 // import style from "../../../styles/Header.module.scss";
 
 export default function Header() {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  // const isSmall = useMediaQuery("(max-width:420px)");
+
+  const [showUpNav, setShowUpNav] = useState(true);
+  function useOutsideAlerter(ref) {
+    useEffect(() => {
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setShowUpNav(scrollY == 0 ? true : false);
+        }
+      }
+      document.addEventListener("scroll", handleClickOutside);
+      return () => {
+        document.removeEventListener("scroll", handleClickOutside);
+      };
+    }, [ref]);
+  }
 
   const list = [
     {
@@ -63,7 +78,11 @@ export default function Header() {
   ];
   return (
     <Container disableGutters maxWidth={false}>
-      {isMatch ? <CustomDrawer list={list} /> : <CustomNavbar list={list} />}
+      {isMatch ? (
+        <CustomDrawer list={list} useOutsideAlerter={useOutsideAlerter} showUpNav={showUpNav}/>
+      ) : (
+        <CustomNavbar list={list} useOutsideAlerter={useOutsideAlerter} showUpNav={showUpNav}/>
+      )}
     </Container>
   );
 }

@@ -1,24 +1,10 @@
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react";
 import { AppBar, Box } from "@mui/material";
 import NavBarUp from "./NavBarUp";
 import NavBarDown from "./NavBarDown";
 
-const CustomNavbar = ({ list }) => {
+const CustomNavbar = ({ list, useOutsideAlerter, showUpNav }) => {
   const maxWidth = "1750px";
-  const [showUpNav, setShowUpNav] = useState(true);
-  function useOutsideAlerter(ref) {
-    useEffect(() => {
-      function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)) {
-          setShowUpNav(scrollY == 0 ? true : false);
-        }
-      }
-      document.addEventListener("scroll", handleClickOutside);
-      return () => {
-        document.removeEventListener("scroll", handleClickOutside);
-      };
-    }, [ref]);
-  }
   const wrapperRef = useRef(null);
   useOutsideAlerter(wrapperRef);
 
