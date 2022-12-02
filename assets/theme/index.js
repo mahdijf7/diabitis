@@ -89,6 +89,7 @@ const overrides = {
     },
   },
   customShadows: {
+    border: "2px solid #45A9A3",
     widget: "0px 0px 10px 5px #1C24531A",
     widgetDark: "0px 0px 10px 5px rgba(28, 36, 83, 0.1)",
     // widgetWide:
