@@ -8,7 +8,7 @@ function CustomLeftArrow({ onClick }) {
       onClick={onClick}
       sx={{
         position: "fixed",
-        marginLeft: { lg: "-15%", md: "-8%" },
+        marginLeft: { lg: "-15%", md: "-11%" },
         zIndex: 100,
       }}
     >

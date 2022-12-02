@@ -3,7 +3,7 @@ import card2 from "../../public/images/home/card2.svg";
 import card3 from "../../public/images/home/card3.svg";
 import card4 from "../../public/images/home/card4.svg";
 import t from "../../public/locales/defualt/common.json";
-import { Box, Container } from "@mui/material";
+import { Box, Container, useMediaQuery } from "@mui/material";
 import CustomSmallCard from "../utiles/CustomSmallCard";
 import style from "../../styles/Carousel.module.scss";
 import Carousel from "react-multi-carousel";
@@ -12,13 +12,23 @@ import CustomRightArrow from "./CustomRightArrow";
 import CustomLeftArrow from "./CustomLeftArrow";
 
 const MultiplePages = () => {
+  const isMatch = useMediaQuery("(max-width:1530px)");
+
   const responsive = {
     desktop: {
       breakpoint: { max: 5000, min: 960 },
       items: 4,
     },
+    // large: {
+    //   breakpoint: { max: 1410, min: 1280 },
+    //   items: 4,
+    // },
+    // ipad: {
+    //   breakpoint: { max: 1280, min: 960 },
+    //   items: 4,
+    // },
     tablet: {
-      breakpoint: { max: 960, min: 600 },
+      breakpoint: { max: 1280, min: 960 },
       items: 3,
     },
     mobile: {
@@ -53,10 +63,10 @@ const MultiplePages = () => {
       maxWidth={false}
       disableGutters
       sx={{
-        pl: { lg: "22px", md: "0px" },
+        pl: isMatch ? "24px" : "0px",
       }}
     >
-      <Box maxWidth="1100px" width={{ lg: "75%", md: "90%" }} m="auto">
+      <Box maxWidth="1100px" width={{ lg: "70%", md: "80%" }} m="auto">
         <Box
           sx={{
             width: "95%",
@@ -70,13 +80,23 @@ const MultiplePages = () => {
             draggable={true}
             ssr={true} // means to render carousel on server-side.
             infinite={true}
-            customRightArrow={<CustomRightArrow />}
+            customRightArrow={<CustomRightArrow isMatch={isMatch} />}
             customLeftArrow={<CustomLeftArrow />}
             autoPlay={true}
             transitionDuration={200}
           >
             {list.map((el, index) => (
-              <CustomSmallCard key={index} img={el.icon} text={el.title} />
+              <CustomSmallCard
+                key={index}
+                img={el.icon}
+                text={el.title}
+                style={{
+                  mx: "10px",
+                  maxWidth: { lg: "200px", md: "250px" },
+                  minHeight: { lg: "250px", md: "280px" },
+                  maxHeight: "300px",
+                }}
+              />
             ))}
           </Carousel>
         </Box>

@@ -1,26 +1,27 @@
-import { Box } from "@mui/material";
+import { Box,useMediaQuery } from "@mui/material";
 import CustomButton from "../utiles/CustomButton";
 import t from "../../public/locales/defualt/common.json";
 
 const Register = () => {
+  const isMatch = useMediaQuery("(max-width:1440px)");
   return (
     <Box
       display="flex"
-      width={{ lg: "70%", md: "80%" }}
-      maxWidth="1100px"
+      width={{ lg: "66%", md: "77%" }}
+      maxWidth="1000px"
       m="40px auto"
-      justifyContent={{ lg: "space-around", md: "space-between" }}
+      justifyContent="space-between"
     >
       <CustomButton
         text={t.home.easyRegister}
         font="large"
-        minWidth={{ lg: "448px", md: "48%" }}
+        minWidth={{ lg: isMatch ? "430" : "460px", md: "48%" }}
         padd={{ md: "24px", lg: "26px" }}
       />
       <CustomButton
         text={t.home.loginGroup}
         font="large"
-        minWidth={{ lg: "448px", md: "48%" }}
+        minWidth={{ lg: isMatch ? "430" :"460px", md: "48%" }}
         padd={{ md: "24px", lg: "26px" }}
       />
     </Box>

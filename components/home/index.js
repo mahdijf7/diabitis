@@ -1,6 +1,8 @@
 import MultiplePagesCrousel from "../carousel/MultiplePages";
 import SinglePageCrousel from "../carousel/SinglePage";
+import Cards from "./Cards";
 import Register from "./Register";
+import VideoBanner from "./VideoBanner";
 
 export default function Home() {
   // const theme = useTheme();
@@ -8,8 +10,10 @@ export default function Home() {
   return (
     <>
       <SinglePageCrousel />
-      <Register/>
+      <Register />
       <MultiplePagesCrousel />
+      <VideoBanner />
+      <Cards />
     </>
   );
 }
