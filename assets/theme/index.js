@@ -42,11 +42,10 @@ const overrides = {
       fontSize: "18px",
       fontWeight: "700",
     },
-    // body3: {
-    //   fontSize: "",
-    //   fontWeight: "",
-    //   lineHeight: "",
-    // },
+    body3: {
+      fontSize: "14px",
+      fontWeight: "700",
+    },
     body4: {
       fontSize: "14px",
       fontWeight: "500",

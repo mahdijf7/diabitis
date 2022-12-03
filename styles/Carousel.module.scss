@@ -16,6 +16,78 @@
     position: absolute !important;
     z-index: 100 !important;
 }
-  .boxCarouselItems{
+.boxCoverBannerMini{
+  height: 170px !important;
+  padding: 14px 24px !important;
+}
+.boxCarouselItems{
     position: relative !important;
+ }
+.boxImageMini{
+  height: 350px !important;
+}
+.imageMini{
+  margin : 0px !important;
+  object-fit: cover !important;
+}
+
+
+
+@media (max-width: 362px) {
+
+  .boxImageMini{
+    height: 205px !important;
   }
+  .imageMini{
+    margin :0 -150px 0 0 !important;
+  }
+  .boxCoverBannerMini{
+    height: 190px !important;
+    padding: 14px !important;
+  }
+  
+}
+@media only screen and (min-width: 362px) and (max-width: 450px)  {
+
+  .boxImageMini{
+    height: 250px !important;
+  }
+  .imageMini{
+    margin :0 -140px 0 0 !important;
+  }
+  .boxCoverBannerMini{
+    height: 180px !important;
+    padding: 14px !important;
+  }
+
+}
+@media only screen and (min-width: 450px) and (max-width: 600px)  {
+
+  .boxImageMini{
+    height: 250px !important;
+  }
+  .imageMini{
+    margin :0 -100px 0 0 !important;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 740px)  {
+
+
+  .boxImageMini{
+    height: 280px !important;
+  }
+  .imageMini{
+    margin :0 -100px 0 0 !important;
+  }
+
+}
+@media only screen and (min-width: 740px) and (max-width: 880px)  {
+
+  .boxImageMini{
+    height: 330px !important;
+  }
+  .imageMini{
+    margin :0 -50px 0 0 !important;
+  }
+
+}

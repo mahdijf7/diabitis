@@ -9,13 +9,20 @@ const CustomButton = ({
   padd = { xs: "5px 30px", lg: "5px 35px" },
   ...otherprops
 }) => {
-  font =
-    font == "small"
-      ? { typography: { md: "subtitle3", lg: "body1" } }
-      : font == "mini"
-      ? { typography: { xs: "subtitle6", sm: "subtitle5" } }
-      : { typography: { md: "body2", lg: "h4" } };
-
+  switch (font) {
+    case "small":
+      font = { typography: { md: "subtitle3", lg: "body1" } };
+      break;
+    case "mini":
+      font = { typography: { xs: "subtitle6", sm: "subtitle5" } };
+      break;
+    case "bold":
+      font = { typography: { xs: "subtitle6", tiny: "body3" } };
+      break;
+    case "large":
+      font = { typography: { md: "body2", lg: "h4" } };
+      break;
+  }
   return (
     <Button
       variant="contained"

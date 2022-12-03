@@ -19,7 +19,7 @@ const CustomDrawer = ({ list, useOutsideAlerter, showUpNav }) => {
         display="flex"
         width={{sm:"95%",xs:"98%"}}
         sx={{
-          m: "0 auto 50px auto",
+          m: "0 auto 55px auto",
           transition: "height 0.25s linear",
           height: showUpNav ? "45px" : "0px",
           alignItems: "center",

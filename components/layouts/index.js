@@ -11,7 +11,7 @@ const Leyouts = ({ children }) => {
       </Head>
       <Header />
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
