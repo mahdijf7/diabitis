@@ -76,6 +76,10 @@ const overrides = {
       fontSize: "12px",
       fontWeight: "400",
     },
+    subtitle7: {
+      fontSize: "10px",
+      fontWeight: "400",
+    },
     fontFamily: `"IRANSans", "sans-serif", "serif" `,
     fontWeightLight: 300,
     fontWeightRegular: 400,

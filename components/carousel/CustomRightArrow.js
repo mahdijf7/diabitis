@@ -8,8 +8,9 @@ function CustomRightArrow({ onClick, isMatch }) {
       onClick={onClick}
       sx={{
         position: "fixed",
-        marginLeft: { lg: isMatch ? "108%" : "106%", md: "102%" },
-        zIndex: 100,
+        left:{ lg: isMatch ? "108%" : "106%", md: "102%" }
+        // marginLeft: { lg: isMatch ? "108%" : "106%", md: "102%" },
+        // zIndex: 100,
       }}
     >
       <Image src={rightIcon} />

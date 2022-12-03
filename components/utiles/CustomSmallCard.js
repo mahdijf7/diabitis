@@ -1,7 +1,7 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import Image from "next/image";
 
-const CustomSmallCard = ({ text, img, style }) => {
+const CustomSmallCard = ({ text, img, style, calss, isSmall }) => {
   const theme = useTheme();
 
   return (
@@ -10,7 +10,8 @@ const CustomSmallCard = ({ text, img, style }) => {
       bgcolor="common.white"
       borderRadius="5px"
       boxShadow={theme.customShadows.widget}
-      sx={style}
+      sx={style || {}}
+      className={calss || ""}
     >
       <Image
         src={img}
@@ -21,9 +22,16 @@ const CustomSmallCard = ({ text, img, style }) => {
       <Typography
         color="text.secondary"
         component="h3"
-        sx={{ typography: { md: "subtitle5", lg: "subtitle5" } }}
+        sx={{
+          typography: {
+            md: "subtitle5",
+            lg: "subtitle5",
+            sm: "subtitle6",
+            xs: "subtitle6",
+          },
+        }}
         textAlign="center"
-        py="26px"
+        py={isSmall ? "15px" : "26px"}
         px="10px"
       >
         {text}

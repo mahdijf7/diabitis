@@ -23,6 +23,10 @@
 .boxCarouselItems{
     position: relative !important;
  }
+ .boxCarouselItemsMini{
+     position: relative !important;
+     padding: 30px 0px;
+  }
 .boxImageMini{
   height: 350px !important;
 }
@@ -30,10 +34,15 @@
   margin : 0px !important;
   object-fit: cover !important;
 }
+.imagesBox{
+  max-width: 290px !important;
+  margin: 0px 10px !important;
+  min-height: 300px !important;
+  max-height: 300px !important;
+}
 
 
-
-@media (max-width: 362px) {
+@media (max-width: 275px) {
 
   .boxImageMini{
     height: 205px !important;
@@ -45,7 +54,48 @@
     height: 190px !important;
     padding: 14px !important;
   }
+  .imagesBox{
+    max-width: 270px !important;
+    min-height: 250px !important;
+    max-height: 250px !important;
+  }
   
+}
+@media only screen and (min-width: 275px) and (max-width: 300px)  {
+
+  .boxImageMini{
+    height: 205px !important;
+  }
+  .imageMini{
+    margin :0 -150px 0 0 !important;
+  }
+  .boxCoverBannerMini{
+    height: 190px !important;
+    padding: 14px !important;
+  }
+  .imagesBox{
+    max-width: 300px !important;
+    min-height: 280px !important;
+    max-height: 280px !important;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 362px)  {
+
+  .boxImageMini{
+    height: 205px !important;
+  }
+  .imageMini{
+    margin :0 -150px 0 0 !important;
+  }
+  .boxCoverBannerMini{
+    height: 190px !important;
+    padding: 14px !important;
+  }
+  .imagesBox{
+    max-width: 300px !important;
+    min-height: 195px !important;
+    max-height: 195px !important;
+  }
 }
 @media only screen and (min-width: 362px) and (max-width: 450px)  {
 
@@ -59,9 +109,13 @@
     height: 180px !important;
     padding: 14px !important;
   }
-
+  .imagesBox{
+    max-width: 300px !important;
+    min-height: 210px !important;
+    max-height: 210px !important;
+  }
 }
-@media only screen and (min-width: 450px) and (max-width: 600px)  {
+@media only screen and (min-width: 450px) and (max-width: 480px)  {
 
   .boxImageMini{
     height: 250px !important;
@@ -69,8 +123,27 @@
   .imageMini{
     margin :0 -100px 0 0 !important;
   }
+  .imagesBox{
+    max-width: 300px !important;
+    min-height: 230px !important;
+    max-height: 230px !important;
+  }
 }
-@media only screen and (min-width: 600px) and (max-width: 740px)  {
+@media only screen and (min-width: 480px) and (max-width: 600px)  {
+
+  .boxImageMini{
+    height: 250px !important;
+  }
+  .imageMini{
+    margin :0 -100px 0 0 !important;
+  }
+  .imagesBox{
+    max-width: 300px !important;
+    min-height: 250px !important;
+    max-height: 250px !important;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 650px)  {
 
 
   .boxImageMini{
@@ -79,9 +152,38 @@
   .imageMini{
     margin :0 -100px 0 0 !important;
   }
-
+  .imagesBox{
+    max-width: 290px !important;
+    margin: 0px 10px !important;
+    min-height: 290px !important;
+    max-height: 300px !important;
+  }
+  .imagesBox{
+    max-width: 300px !important;
+    min-height: 280px !important;
+    max-height: 280px !important;
+  }
 }
-@media only screen and (min-width: 740px) and (max-width: 880px)  {
+@media only screen and (min-width: 650px) and (max-width: 740px)  {
+
+
+  .boxImageMini{
+    height: 280px !important;
+  }
+  .imageMini{
+    margin :0 -100px 0 0 !important;
+  }
+  .imagesBox{
+    max-width: 300px !important;
+    margin: 0px 10px !important;
+    min-height: 290px !important;
+    max-height: 300px !important;
+  }
+  .imagesBox{
+    min-height: 254px !important;
+  }
+}
+@media only screen and (min-width: 740px) and (max-width: 780px)  {
 
   .boxImageMini{
     height: 330px !important;
@@ -89,5 +191,19 @@
   .imageMini{
     margin :0 -50px 0 0 !important;
   }
+  .imagesBox{
+    min-height: 270px !important;
+  }
+}
+@media only screen and (min-width: 780px) and (max-width: 880px)  {
 
+  .boxImageMini{
+    height: 330px !important;
+  }
+  .imageMini{
+    margin :0 -50px 0 0 !important;
+  }
+  .imagesBox{
+    min-height: 290px !important;
+  }
 }

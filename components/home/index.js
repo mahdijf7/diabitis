@@ -1,5 +1,6 @@
 import { useMediaQuery, useTheme } from "@mui/material";
 import MultiplePagesCrousel from "../carousel/MultiplePages";
+import MultiplePagesCrouselMini from "../carousel/MultiplePagesMini";
 import SinglePageCrousel from "../carousel/SinglePage";
 import SinglePageCrouselMini from "../carousel/SinglePageMini";
 import Cards from "./Cards";
@@ -17,6 +18,9 @@ export default function Home() {
         <>
           <SinglePageCrouselMini />
           <RegisterMini />
+          <MultiplePagesCrouselMini />
+          <VideoBanner />
+          <Steps />
         </>
       ) : (
         <>
