@@ -38,7 +38,7 @@ const CustomButton = ({
         },
       }}
     >
-      <Typography component="h3" sx={{ ...font }} color="">
+      <Typography component="h3" sx={{ ...font }} color="text.primary">
         {text}
       </Typography>
     </Button>

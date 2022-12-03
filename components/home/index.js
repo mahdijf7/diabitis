@@ -8,6 +8,10 @@ import Register from "./Register";
 import RegisterMini from "./RegisterMini";
 import Steps from "./Steps";
 import VideoBanner from "./VideoBanner";
+import Device from "./Device";
+import Account from "./Account";
+import DeviceMini from "./DeviceMini";
+import AccountMini from "./AccountMini";
 
 export default function Home() {
   const theme = useTheme();
@@ -19,7 +23,9 @@ export default function Home() {
           <SinglePageCrouselMini />
           <RegisterMini />
           <MultiplePagesCrouselMini />
+          <DeviceMini />
           <VideoBanner />
+          <AccountMini />
           <Steps />
         </>
       ) : (
@@ -27,8 +33,10 @@ export default function Home() {
           <SinglePageCrousel />
           <Register />
           <MultiplePagesCrousel />
+          <Device />
           <VideoBanner />
           <Cards />
+          <Account />
           <Steps />
         </>
       )}
