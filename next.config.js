@@ -6,8 +6,8 @@ const nextConfig = {
   reactStrictMode: true,
   distDir: "build",
   images: {
-    // loader: "akamai",
     path: "/_next/image",
+    unoptimized: true,
   },
 };
 
