@@ -95,13 +95,13 @@ const Device = () => {
                   "&:hover": { backgroundColor: "common.white" },
                 }}
               >
-                <Image src={dubleArrow} />
+                <Image src={dubleArrow} loading="lazy" />
               </Button>
             </Link>
           </Box>
         </Box>
         <Box position="absolute" sx={{ left: "4%", width: "50%" }}>
-          <Image src={device} />
+          <Image src={device} loading="lazy" />
         </Box>
       </Box>
     </Container>

@@ -6,7 +6,12 @@ const FooterMini = ({ contact, icons, list }) => {
   return (
     <>
       <Box>
-        <Image src={"/images/logo.svg"} width="53px" height="55px" />
+        <Image
+          src={"/images/logo.svg"}
+          width="53px"
+          height="55px"
+          loading="lazy"
+        />
         <Typography
           color="common.white"
           sx={{
@@ -45,7 +50,7 @@ const FooterMini = ({ contact, icons, list }) => {
         {contact.map((el, index) => (
           <Box display="flex" key={index} alignItems="flex-start" mb="8px">
             <Box ml="10px">
-              <Image src={el.icon} width="20px" height="20px" />
+              <Image src={el.icon} width="20px" height="20px" loading="lazy" />
             </Box>
             <Box width="85%">
               <Typography
@@ -64,7 +69,7 @@ const FooterMini = ({ contact, icons, list }) => {
       <Box display="flex" justifyContent="center">
         {icons.map((el, index) => (
           <Box key={index} mx={{ sm: "12px", xs: "7px" }}>
-            <Image src={el} width="27px" height="27px" />
+            <Image src={el} width="27px" height="27px" loading="lazy" />
           </Box>
         ))}
       </Box>

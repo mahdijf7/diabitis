@@ -12,7 +12,7 @@ function CustomLeftArrow({ onClick }) {
         // zIndex: 100,
       }}
     >
-      <Image src={leftIcon} />
+      <Image src={leftIcon} loading="lazy"/>
     </IconButton>
   );
 }

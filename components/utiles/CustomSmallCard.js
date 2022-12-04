@@ -18,6 +18,7 @@ const CustomSmallCard = ({ text, img, style, calss, isSmall }) => {
         alt="placeholder"
         objectFit="contain"
         layout="responsive"
+        loading="lazy"
       />
       <Typography
         color="text.secondary"

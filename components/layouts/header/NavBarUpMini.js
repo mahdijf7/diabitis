@@ -14,6 +14,7 @@ const NavBarUpMini = () => {
             width="25px"
             height="25px"
             style={{ cursor: "pointer" }}
+            loading="lazy"
           />
         </IconButton>
       </Link>

@@ -58,7 +58,12 @@ const Steps = () => {
   const Card = ({ index }) => {
     return (
       <Box textAlign="center" px={isMini ? "2px" : "8px"}>
-        <Image src={list[index].img} width={sizeImage} height={sizeImage} />
+        <Image
+          src={list[index].img}
+          width={sizeImage}
+          height={sizeImage}
+          loading="lazy"
+        />
         <Typography
           color="text.hint"
           component="h2"
@@ -122,6 +127,7 @@ const Steps = () => {
             <Box width="40%" height="50%" className={style.dash} />
             <Box width="20%" display="flex" alignItems="center">
               <Image
+                loading="lazy"
                 src={"/images/home/arrow.svg"}
                 width="20px"
                 height="20px"
@@ -140,6 +146,7 @@ const Steps = () => {
             <Box width="40%" height="50%" className={style.dash} />
             <Box width="20%" display="flex" alignItems="center">
               <Image
+                loading="lazy"
                 src={"/images/home/arrow.svg"}
                 width="20px"
                 height="20px"

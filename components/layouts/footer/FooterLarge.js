@@ -6,7 +6,12 @@ const FooterLarge = ({ contact, icons, list }) => {
   return (
     <>
       <Box width="42.6%">
-        <Image src={"/images/logo.svg"} width="53px" height="55px" />
+        <Image
+          src={"/images/logo.svg"}
+          width="53px"
+          height="55px"
+          loading="lazy"
+        />
         <Typography
           color="common.white"
           sx={{ typography: { md: "h4", lg: "h2" }, pb: "20px", pt: "5px" }}
@@ -28,7 +33,7 @@ const FooterLarge = ({ contact, icons, list }) => {
       <Box width="30%" display="flex" alignItems="flex-end">
         {icons.map((el, index) => (
           <Box key={index} mx={{ lg: "12px", md: "7px" }}>
-            <Image src={el} width="27px" height="27px" />
+            <Image src={el} width="27px" height="27px" loading="lazy" />
           </Box>
         ))}
       </Box>
@@ -48,7 +53,7 @@ const FooterLarge = ({ contact, icons, list }) => {
         {contact.map((el, index) => (
           <Box display="flex" key={index} alignItems="flex-start" mb="8px">
             <Box width="15%">
-              <Image src={el.icon} width="20px" height="20px" />
+              <Image src={el.icon} width="20px" height="20px" loading="lazy" />
             </Box>
             <Box width="85%">
               <Typography

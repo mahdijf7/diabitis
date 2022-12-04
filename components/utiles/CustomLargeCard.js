@@ -16,6 +16,7 @@ const CustomLargeCard = ({ text, img, isMatch }) => {
           alt="placeholder"
           objectFit="contain"
           layout="responsive"
+          loading="lazy"
         />
       </Box>
       <Box width="100%" p={{ md: "30px 35px", xs: "20px 5px" }}>

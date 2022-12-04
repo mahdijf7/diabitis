@@ -21,6 +21,7 @@ const NavBarUp = () => {
               width="41px"
               height="42px"
               style={{ cursor: "pointer" }}
+              loading="lazy"
             />
           </IconButton>
         </Link>

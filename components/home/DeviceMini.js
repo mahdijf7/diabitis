@@ -103,7 +103,7 @@ const DeviceMini = () => {
                   "&:hover": { backgroundColor: "common.white" },
                 }}
               >
-                <Image src={dubleArrow} />
+                <Image src={dubleArrow} loading="lazy" />
               </IconButton>
             </Link>
           </Box>
@@ -117,6 +117,7 @@ const DeviceMini = () => {
         <Image
           src={"/images/home/device.png"}
           width="1100px"
+          loading="lazy"
           height={
             isSmall ? "900px" : isMid ? "700px" : isMatch ? "550px" : "400px"
           }

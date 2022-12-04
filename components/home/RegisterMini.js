@@ -19,6 +19,7 @@ const RegisterMini = () => {
                 src={"/images/home/addUser.svg"}
                 width="20px"
                 height="20px"
+                loading="lazy"
               />
             </Box>
             {t.home.loginGroup}
@@ -35,6 +36,7 @@ const RegisterMini = () => {
                 src={"/images/home/joinUser.svg"}
                 width="20px"
                 height="20px"
+                loading="lazy"
               />
             </Box>
             {t.home.easyRegister}

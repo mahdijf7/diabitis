@@ -13,7 +13,7 @@ function CustomRightArrow({ onClick, isMatch }) {
         // zIndex: 100,
       }}
     >
-      <Image src={rightIcon} />
+      <Image src={rightIcon} loading="lazy" />
     </Button>
   );
 }
