@@ -57,5 +57,36 @@
     "accountDes3": "دسترسی سریع بیماران به پزشکان محبوب ",
     "accountDes4": "نوبت دهی ۲۴ ساعته به صورت آنلاین ",
     "accountDes5": "ارتباط موثر پزشک و بیماری "
+  },
+  "register": {
+    "noData": "هیچ رکوردی یافت نشد",
+    "firstname": "نام",
+    "lastname": "نام خانوادگی",
+    "idNumber": "شماره شناسنامه",
+    "nationalCode": "کد ملی",
+    "fathersName": "نام پدر",
+    "gender": "جنسیت",
+    "female": "خانم",
+    "male": "آقا",
+    "phone": "تلفن ثابت",
+    "mobile": "تلفن همراه",
+    "dateOfBirth": "تاریخ تولد",
+    "typeOfDiabetes": "نوع دیابت",
+    "typeOfDiabetes1": "نوع ١",
+    "typeOfDiabetes2": "نوع ٢",
+    "typeOfDiabetes3": "نوع ٣",
+    "email": "پست الکترونیک",
+    "postalCode": "کد پستی",
+    "province": "استان",
+    "city": "شهر",
+    "address": "آدرس",
+    "captcha": "کد امنیتی",
+    "confirmInformation": "تایید اطلاعات",
+    "accountPrice": "هزینه عضویت سالانه ١٫٠٠٠٫٠٠٠  ریال معادل یکصد هزار تومان می باشد"
+  },
+  "all": {
+    "required": "این فیلد اجباری است",
+    "success": "موفق",
+    "error": "خطا"
   }
 }

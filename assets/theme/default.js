@@ -3,8 +3,8 @@ export const lightMode = {
     mode: "light",
     primary: {
       main: "#FED453",
-      // light: "",
-      // dark: "",
+      light: "#F2F2F7",
+      dark: "#2C2C2E",
     },
     secondary: {
       main: "#45A9A3",
@@ -13,10 +13,11 @@ export const lightMode = {
     },
     gray: {
       main: "#EDEBEB",
+      light: "#D1D1D6",
     },
-    // info: {
-    //   main: lighter,
-    // },
+    info: {
+      main: "#F2F2F7",
+    },
     // warning: {
     //   main: dark,
     // },
@@ -44,8 +45,8 @@ export const darkMode = {
     mode: "dark",
     primary: {
       main: "#FED453",
-      light: "#EDEBEB",
-      // dark: "",
+      light: "#F2F2F7",
+      dark: "#2C2C2E",
     },
     secondary: {
       main: "#45A9A3",
@@ -54,10 +55,11 @@ export const darkMode = {
     },
     gray: {
       main: "#EDEBEB",
+      light: "#D1D1D6",
     },
-    // info: {
-    //   main: lighter,
-    // },
+    info: {
+      main: "#F2F2F7",
+    },
     // warning: {
     //   main: dark,
     // },
@@ -73,7 +75,7 @@ export const darkMode = {
       secondary: "#080D28",
       hint: "#1E6F6A",
       primaryChannel: "#163432",
-      // secondaryChannel: "#004D88",
+      // secondaryChannel: "#FED453",
     },
     background: {
       default: "#F5F5F5",

@@ -10,12 +10,15 @@
     "export": "next build && next export"
   },
   "dependencies": {
+    "@date-io/date-fns-jalali": "^2.16.0",
     "@emotion/cache": "^11.10.3",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.10",
+    "@mui/x-date-pickers": "^5.0.9",
     "axios": "^1.2.0",
+    "date-fns-jalali": "^2.13.0-0",
     "formik": "^2.2.9",
     "next": "12.3.1",
     "react": "18.2.0",
