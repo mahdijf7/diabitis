@@ -28,9 +28,9 @@ const AccountMini = () => {
   return (
     <>
       <Box
-        width="90%"
-        m="10% auto 0 auto"
-        pt="3%"
+        width={{ sm: "80%", xs: "90%" }}
+        m={{ tiny: "10% auto 0 auto", xs: "15% auto 0 auto" }}
+        pt={{ sm:"3%",tiny: "5%", xs: "7%" }}
         bgcolor="common.white"
         sx={{
           transform: "scale(1)",
@@ -44,9 +44,9 @@ const AccountMini = () => {
             bgcolor="secondary.main"
             sx={{
               borderRadius: "2px",
-              width: "40%",
-              height: "55px",
-              right: "30%",
+              width: { sm: "35%", xs: "55%" },
+              right: { sm: "32.5%", xs: "22.5%" },
+              height: { xs: "45px", lg: "65px" },
               top: "-27px",
               justifyContent: "center",
               alignItems: "center",
@@ -58,7 +58,7 @@ const AccountMini = () => {
               component="h1"
               color="common.white"
               sx={{
-                typography: { md: "subtitle1", lg: "h4" },
+                typography: { xs: "subtitle3", tiny: "body2" },
               }}
             >
               {t.home.group}
@@ -68,8 +68,8 @@ const AccountMini = () => {
             {list.map((el, index) => (
               <Typography
                 sx={{
-                  lineHeight: "50px",
-                  typography: { md: "h6", lg: "h3" },
+                  lineHeight: "25px",
+                  typography: {sm:"subtitle5", tiny: "subtitle6", xs: "subtitle7" },
                 }}
                 key={index}
                 component="h1"
@@ -85,14 +85,9 @@ const AccountMini = () => {
       <Container
         disableGutters
         maxWidth={false}
+        className={style.memberBoxMini}
         sx={{
-          mt: "-10%",
-          // mb: 5,
-          zIndex:-1,
-          position:"relative",
-          height: "300px",
           backgroundColor: "secondary.main",
-          // textAlign: "end",
         }}
       >
         <SelectCustom

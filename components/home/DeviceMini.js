@@ -17,7 +17,8 @@ import style from "../../styles/Home.module.scss";
 const DeviceMini = () => {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("sm"));
-  const isSmall = useMediaQuery("(max-width:500px)");
+  const isMid = useMediaQuery("(max-width:500px)");
+  const isSmall = useMediaQuery("(max-width:400px)");
 
   return (
     <Container
@@ -25,7 +26,7 @@ const DeviceMini = () => {
       maxWidth={false}
       className={style.diabetContainer}
     >
-      <Box width="90%" m="auto">
+      <Box width={{ xs: "90%", sm: "80%" }} m="auto">
         <Box
           zIndex={1000}
           display="grid"
@@ -84,7 +85,7 @@ const DeviceMini = () => {
             <Link href="/#">
               <Typography
                 sx={{
-                  cursor: "pointer" ,
+                  cursor: "pointer",
                   typography: { xs: "subtitle6", sm: "subtitle5" },
                 }}
                 component="h1"
@@ -98,7 +99,7 @@ const DeviceMini = () => {
                 sx={{
                   p: 0,
                   // minWidth: "30px",
-                  maxWidth:{xs:"15px",sm:"25px"},
+                  maxWidth: { xs: "15px", sm: "25px" },
                   "&:hover": { backgroundColor: "common.white" },
                 }}
               >
@@ -107,13 +108,19 @@ const DeviceMini = () => {
             </Link>
           </Box>
         </Box>
-        <Box position="relative" mt={{tiny:"-10%", xs:"0px"}} zIndex="-1">
-          <Image
-            src={"/images/home/device.png"}
-            width="900px"
-            height={isSmall ? "500px" : isMatch ? "430px" : "325px"}
-          />
-        </Box>
+      </Box>
+      <Box
+        position="relative"
+        mt={{ sm: "-13%", tiny: isSmall ? "-40%" :isMid?"-25%": "-15%", xs: "-35%" }}
+        zIndex="-1"
+      >
+        <Image
+          src={"/images/home/device.png"}
+          width="1100px"
+          height={
+            isSmall ? "900px" : isMid ? "700px" : isMatch ? "550px" : "400px"
+          }
+        />
       </Box>
     </Container>
   );

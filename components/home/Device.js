@@ -37,12 +37,12 @@ const Device = () => {
             bgcolor="secondary.main"
             sx={{
               borderRadius: "2px",
-              width: "35%",
+              width: "214px",
               height: { xs: "45px", lg: "65px" },
               justifyContent: "center",
               justifySelf: "center",
               alignItems: "center",
-              mt: { lg: "-90px", xs: "-60px" },
+              mt: { lg: "-75px", xs: "-61px" },
             }}
           >
             <Typography

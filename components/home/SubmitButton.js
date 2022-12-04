@@ -6,8 +6,8 @@ const SubmitButton = ({ text }) => {
       variant="contained"
       fullWidth
       sx={{
-        mt: "30px",
-        height: "60px",
+        mt: { tiny: "20px", xs: "10px" },
+        height: { sm: "60px", tiny: "50px", xs: "45px" },
         borderRadius: "30px",
         boxShadow: "none",
         "&:hover": {
@@ -18,9 +18,15 @@ const SubmitButton = ({ text }) => {
       <Typography
         color="text.primary"
         component="span"
-        sx={{ typography: { md: "h4", xs: "body2" } }}
+        sx={{
+          typography: {
+            md: "h4",
+            sm: "body2",
+            tiny: "subtitle3",
+            xs: "subtitle5",
+          },
+        }}
       >
-        {" "}
         {text}
       </Typography>
     </Button>

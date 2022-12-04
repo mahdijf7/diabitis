@@ -18,7 +18,7 @@ const SelectCustom = ({ text, textButton }) => {
   };
   return (
     <Box className={style.boxButton}>
-      <Box sx={{ width: { lg: "300px", xs: "260px" } }}>
+      <Box sx={{ width: { lg: "300px", md: "260px",sm:"280px", xs: "100%" } , m:"auto"}}>
         <FormControl fullWidth variant="outlined">
           <Select
             labelId="demo-simple-select-label"
@@ -26,9 +26,11 @@ const SelectCustom = ({ text, textButton }) => {
             label="membershipType"
             onChange={handleChange}
             sx={{
+              fontSize: { md: "20px", sm: "18px", tiny: "16px", xs: "14px" },
               backgroundColor: "background.default",
               boxShadow: "none",
-              borderRadius: "10px",
+              height: { sm: "60px", tiny: "50px", xs: "45px" },
+              borderRadius: { tiny: "10px", xs: "5px" },
               ".MuiOutlinedInput-notchedOutline": { border: 0 },
               "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
                 border: 0,
