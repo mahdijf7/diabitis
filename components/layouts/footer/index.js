@@ -49,7 +49,7 @@ const Footer = () => {
         backgroundColor: "secondary.main",
         p: isMatch ? "25px 60px 50px 60px" : "25px 25px",
         display: { md: "flex", xs: "grid" },
-        mt: { lg: "60px", md: "45px", xs: "30px" },
+        // mt: { lg: "60px", md: "45px", xs: "30px" },
       }}
     >
       {isMatch ? (

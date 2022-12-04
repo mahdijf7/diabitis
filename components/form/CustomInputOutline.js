@@ -8,7 +8,8 @@ const TextFieldCustom = styled(TextField)(({ theme }) => ({
   // backgroundColor:"primary.dark",
   "& input": {
     "&:-webkit-autofill": {
-      WebkitBoxShadow: `0 0 0px 1000px ${theme.palette.background.paper} inset !important`,
+      WebkitBoxShadow: `0 0 0px 1000px ${theme.palette.primary.light} inset !important`,
+      "-webkit-text-fill-color": theme.palette.primary.dark,
     },
     '&::placeholder': {
       // textOverflow: 'ellipsis !important',

@@ -81,7 +81,7 @@ const Steps = () => {
     );
   };
   return (
-    <Container disableGutters maxWidth={false}>
+    <Container disableGutters maxWidth={false} sx={{pb:"5%", pt:{md:"0px", xs:"5%"}}}>
       <Typography
         color="text.primary"
         sx={{

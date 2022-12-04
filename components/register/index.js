@@ -4,13 +4,10 @@ import {
   Button,
   CircularProgress,
   Grid,
-  IconButton,
   Typography,
 } from "@mui/material";
-import { Cached as CachedIcon } from "@mui/icons-material";
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
-import _ from "lodash";
 import t from "../../public/locales/defualt/common.json";
 import TableFrameEdit from "../form/TableFrameEdit";
 import CustomInputOutline from "../form/CustomInputOutline";
@@ -206,7 +203,6 @@ const Register = ({ provinceOptions, citiesList }) => {
       >
         <Form>
           <TableFrameEdit
-            loading={false}
             notFoundText={"account.noData"}
             data={initialValuesCreate}
           >
