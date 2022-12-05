@@ -37,10 +37,16 @@ export default function JalaliDatePicker({ text }) {
         renderInput={(params) => (
           <TextField
             {...params}
+            variant="filled"
             sx={{
               width: "100% !important",
               margin: "15px 0px",
               // backgroundColor:"primary.main",
+              "& .MuiFormLabel-root": {
+                right: "20px !important",
+                left: "auto !important",
+                transformOrigin: "top right !important",
+              },
               "& input": {
                 "&::placeholder": {
                   // textOverflow: 'ellipsis !important',
@@ -48,9 +54,9 @@ export default function JalaliDatePicker({ text }) {
                   opacity: 1,
                 },
               },
-              "& .MuiOutlinedInput-root": {
+              "& .MuiFilledInput-root": {
                 backgroundColor: theme.palette.primary.light,
-                border: theme.palette.grey.dark,
+                border: "solid #D1D1D6 1px",
                 // color:theme.palette.primary.main,
                 borderRadius: "8px",
               },
@@ -61,6 +67,12 @@ export default function JalaliDatePicker({ text }) {
             }}
           />
         )}
+        InputProps={{
+          disableUnderline: true,
+          style: {
+            borderRadius: "10px",
+          },
+        }}
       />
     </LocalizationProvider>
   );

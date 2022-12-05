@@ -46,7 +46,6 @@ const SelectWrapper = ({ name, options, t, setProvince, ...otherProps }) => {
         },
         "& .MuiFilledInput-root": {
           backgroundColor: theme.palette.primary.light,
-          border: theme.palette.primary.light,
           color: theme.palette.primary.main,
           borderRadius: "8px",
           textAlign: "right",
