@@ -40,7 +40,7 @@ export default function JalaliDatePicker({ text }) {
             sx={{
               width: "100% !important",
               margin: "15px 0px",
-              // backgroundColor:"primary.dark",
+              // backgroundColor:"primary.main",
               "& input": {
                 "&::placeholder": {
                   // textOverflow: 'ellipsis !important',
@@ -51,7 +51,7 @@ export default function JalaliDatePicker({ text }) {
               "& .MuiOutlinedInput-root": {
                 backgroundColor: theme.palette.primary.light,
                 border: theme.palette.grey.dark,
-                // color:theme.palette.primary.dark,
+                // color:theme.palette.primary.main,
                 borderRadius: "8px",
               },
               "& .MuiInputLabel-root": {

@@ -1,7 +1,7 @@
 //-----------------------------------mui-------------------------------
 import { Box, Container, Typography, useTheme } from "@mui/material";
 import t from "../../public/locales/defualt/common.json";
-import SelectCustom from "./SelectCustom";
+import SelectCustom from "../utiles/SelectCustom";
 
 import style from "../../styles/Home.module.scss";
 
@@ -30,7 +30,7 @@ const AccountMini = () => {
       <Box
         width={{ sm: "80%", xs: "90%" }}
         m={{ tiny: "10% auto 0 auto", xs: "15% auto 0 auto" }}
-        pt={{ sm:"3%",tiny: "5%", xs: "7%" }}
+        pt={{ sm: "3%", tiny: "5%", xs: "7%" }}
         bgcolor="common.white"
         sx={{
           transform: "scale(1)",
@@ -69,7 +69,11 @@ const AccountMini = () => {
               <Typography
                 sx={{
                   lineHeight: "25px",
-                  typography: {sm:"subtitle5", tiny: "subtitle6", xs: "subtitle7" },
+                  typography: {
+                    sm: "subtitle5",
+                    tiny: "subtitle6",
+                    xs: "subtitle7",
+                  },
                 }}
                 key={index}
                 component="h1"
@@ -90,10 +94,7 @@ const AccountMini = () => {
           backgroundColor: "secondary.main",
         }}
       >
-        <SelectCustom
-          text={t.home.membershipType}
-          textButton={t.home.continue}
-        />
+        <SelectCustom />
       </Container>
     </>
   );

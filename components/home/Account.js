@@ -1,7 +1,7 @@
 //-----------------------------------mui-------------------------------
 import { Box, Container, Typography, useTheme } from "@mui/material";
 import t from "../../public/locales/defualt/common.json";
-import SelectCustom from "./SelectCustom";
+import SelectCustom from "../utiles/SelectCustom";
 
 import style from "../../styles/Home.module.scss";
 
@@ -70,7 +70,7 @@ const Account = () => {
                 justifyContent: "center",
                 justifySelf: "center",
                 alignItems: "center",
-                mt: {lg:"-30px",xs:"-20px"},
+                mt: { lg: "-30px", xs: "-20px" },
               }}
             >
               <Typography
@@ -100,10 +100,7 @@ const Account = () => {
               ))}
             </Box>
           </Box>
-          <SelectCustom
-            text={t.home.membershipType}
-            textButton={t.home.continue}
-          />
+          <SelectCustom />
         </Box>
       </Box>
     </Container>

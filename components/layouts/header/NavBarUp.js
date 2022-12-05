@@ -9,7 +9,7 @@ const NavBarUp = () => {
     <Grid container sx={{ placeItems: "center" }}>
       <Grid
         item
-        md={6}
+        md={12}
         display="flex"
         alignItems="center"
         justifyContent="flex-start"
@@ -33,9 +33,9 @@ const NavBarUp = () => {
           {t.header.title}
         </Typography>
       </Grid>
-      <Grid item md={6} display="flex" justifyContent="flex-end">
+      {/* <Grid item md={6} display="flex" justifyContent="flex-end">
         <CustomButton text={t.header.test} />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };

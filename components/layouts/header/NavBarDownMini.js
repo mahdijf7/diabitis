@@ -10,7 +10,7 @@ const NavBarDownMini = ({ list }) => {
       <Grid container columns={12} sx={{ placeItems: "center" }}>
         <Grid item xs={6}>
           <IconButton>
-            <MenuIcon fontSize={isSmall ? "medium" : "large"} color="primary" />
+            <MenuIcon fontSize={isSmall ? "medium" : "large"} color="info" />
           </IconButton>
         </Grid>
         <Grid item xs={6} display="flex" justifyContent="flex-end">

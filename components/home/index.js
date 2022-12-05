@@ -21,7 +21,7 @@ export default function Home() {
       {isMatch ? (
         <>
           <SinglePageCrouselMini />
-          <RegisterMini />
+          {/* <RegisterMini /> */}
           <MultiplePagesCrouselMini />
           <DeviceMini />
           <VideoBanner />
@@ -31,7 +31,7 @@ export default function Home() {
       ) : (
         <>
           <SinglePageCrousel />
-          <Register />
+          {/* <Register /> */}
           <MultiplePagesCrousel />
           <Device />
           <VideoBanner />

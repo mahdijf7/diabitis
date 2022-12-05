@@ -63,6 +63,7 @@ const MultiplePages = () => {
       maxWidth={false}
       disableGutters
       sx={{
+        mt: { lg: "50px", md: "40px" },
         pl: isMatch ? "24px" : "0px",
       }}
     >

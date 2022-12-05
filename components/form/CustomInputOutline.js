@@ -5,22 +5,22 @@ import { styled } from "@mui/material/styles";
 const TextFieldCustom = styled(TextField)(({ theme }) => ({
   width: "100% !important",
   margin: "15px 0px",
-  // backgroundColor:"primary.dark",
+  // backgroundColor:"primary.main",
   "& input": {
     "&:-webkit-autofill": {
       WebkitBoxShadow: `0 0 0px 1000px ${theme.palette.primary.light} inset !important`,
-      webkitTextFillColor : theme.palette.primary.dark,
+      webkitTextFillColor : theme.palette.primary.main,
     },
     '&::placeholder': {
       // textOverflow: 'ellipsis !important',
-      color: theme.palette.primary.dark,
+      color: theme.palette.primary.main,
       opacity:1
     }
   },
   "& .MuiOutlinedInput-root":{
     backgroundColor:theme.palette.primary.light, 
     border: theme.palette.grey.dark,
-    // color:theme.palette.primary.dark,
+    // color:theme.palette.primary.main,
     borderRadius:"8px",
   }
 }));

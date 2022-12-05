@@ -13,16 +13,17 @@ const SubmitButtonFill = ({ children, sx, ...otherProps }) => {
   };
   return (
     <Button
+      color="info"
       sx={{
         height: "56px",
-        backgroundColor: "primary.main",
+        backgroundColor: "info.main",
         color: "common.white",
         boxShadow: "none",
         "&:hover": {
-          bgcolor: "primary.main",
+          bgcolor: "info.main",
         },
-        "&.MuiButton-root":{
-          borderRadius:"30px",
+        "&.MuiButton-root": {
+          borderRadius: "30px",
         },
         ...sx,
       }}

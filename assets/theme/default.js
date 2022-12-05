@@ -2,9 +2,9 @@ export const lightMode = {
   palette: {
     mode: "light",
     primary: {
-      main: "#FED453",
+      main: "#2C2C2E",
       light: "#F2F2F7",
-      dark: "#2C2C2E",
+      dark: "#FED453",
     },
     secondary: {
       main: "#45A9A3",
@@ -16,11 +16,11 @@ export const lightMode = {
       light: "#D1D1D6",
     },
     info: {
+      main: "#FED453",
+    },
+    warning: {
       main: "#F2F2F7",
     },
-    // warning: {
-    //   main: dark,
-    // },
     // dark: {
     //   main: dark,
     // },

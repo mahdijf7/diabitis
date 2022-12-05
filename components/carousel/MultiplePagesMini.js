@@ -47,6 +47,9 @@ const MultiplePagesMini = () => {
     <Container
       maxWidth={false}
       disableGutters
+      sx={{
+        mt: { sm: "35px", xs: "25px" },
+      }}
     >
       <Box>
         <Box

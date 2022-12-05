@@ -31,22 +31,7 @@ export default function Header() {
       col: 3,
     },
     {
-      label: t.header.memberShip,
-      link: "/",
-      col: 3,
-    },
-    {
-      label: t.header.request,
-      link: "/",
-      col: 4,
-    },
-    {
       label: t.header.store,
-      link: "/",
-      col: 3,
-    },
-    {
-      label: t.header.group,
       link: "/",
       col: 3,
     },
@@ -56,32 +41,65 @@ export default function Header() {
       col: 3,
     },
     {
-      label: t.header.center,
-      link: "/",
-      col: 4,
-    },
-    {
-      label: t.header.report,
+      label: t.header.service,
       link: "/",
       col: 3,
     },
     {
-      label: t.header.rule,
-      link: "/",
-      col: 4,
-    },
-    {
-      label: t.header.contact,
+      label: t.header.aboutUs,
       link: "/",
       col: 3,
     },
+    {
+      label: t.header.memberShip,
+      link: "/",
+      col: 3,
+    },
+    // {
+    //   label: t.header.request,
+    //   link: "/",
+    //   col: 4,
+    // },
+    // {
+    //   label: t.header.group,
+    //   link: "/",
+    //   col: 3,
+    // },
+    // {
+    //   label: t.header.center,
+    //   link: "/",
+    //   col: 4,
+    // },
+    // {
+    //   label: t.header.report,
+    //   link: "/",
+    //   col: 3,
+    // },
+    // {
+    //   label: t.header.rule,
+    //   link: "/",
+    //   col: 4,
+    // },
+    // {
+    //   label: t.header.contact,
+    //   link: "/",
+    //   col: 3,
+    // },
   ];
   return (
     <Container disableGutters maxWidth={false}>
       {isMatch ? (
-        <CustomDrawer list={list} useOutsideAlerter={useOutsideAlerter} showUpNav={showUpNav}/>
+        <CustomDrawer
+          list={list}
+          useOutsideAlerter={useOutsideAlerter}
+          showUpNav={showUpNav}
+        />
       ) : (
-        <CustomNavbar list={list} useOutsideAlerter={useOutsideAlerter} showUpNav={showUpNav}/>
+        <CustomNavbar
+          list={list}
+          useOutsideAlerter={useOutsideAlerter}
+          showUpNav={showUpNav}
+        />
       )}
     </Container>
   );

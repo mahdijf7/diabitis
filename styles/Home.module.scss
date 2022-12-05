@@ -42,6 +42,7 @@
 }
 .boxButton{
     width:30% !important;
+    margin-top: 4% !important;
 }
 @media (max-width: 360px) {
     .diabetContainer{
@@ -62,8 +63,8 @@
     }
     .boxButton{
         width:100% !important;
-        margin-top: 0% !important;
-        padding-top: 34% !important;
+        margin-top: 5% !important;
+        padding-top: 23% !important;
         padding-right: 10% !important;
         padding-left: 10% !important;
     }
@@ -88,7 +89,7 @@
     .boxButton{
         width:100% !important;
         margin-top: 10% !important;
-        padding-top: 25% !important;
+        padding-top: 20% !important;
         padding-right: 10% !important;
         padding-left: 10% !important;
     }
@@ -113,7 +114,7 @@
     .boxButton{
         width:100% !important;
         margin-top: 10% !important;
-        padding-top: 25% !important;
+        padding-top: 20% !important;
         padding-right: 20% !important;
         padding-left: 20% !important;
     }
@@ -138,10 +139,10 @@
     .boxButton{
         width:100% !important;
         margin-top: 18% !important;
-        padding-top: 15% !important;
+        padding-top: 13% !important;
     }
 }
-@media only screen and (min-width: 860px) and (max-width: 960px)  {
+@media only screen and (min-width: 860px) and (max-width: 959.5px)  {
     .diabetContainer{
         height : 470px !important;
         margin-top: 45px !important;
@@ -156,7 +157,7 @@
     }
     .memberBox{
         width: 100% !important;
-        margin-top: -25% !important;
+        // margin-top: -25% !important;
     }
     .memberBoxMini{
         margin-top: -30% !important;
@@ -165,10 +166,10 @@
     .boxButton{
         width:100% !important;
         margin-top: 20% !important;
-        padding-top: 12% !important;
+        padding-top: 10% !important;
     }
 }
-@media only screen and (min-width: 960px) and (max-width: 970px)  {
+@media only screen and (min-width: 959.5px) and (max-width: 970px)  {
     .diabetContainer{
         height : 390px !important;
         margin-top: 45px !important;
@@ -185,7 +186,7 @@
         justify-content: flex-start !important;
         display: grid !important;
         height: 50% !important;
-        margin-top: 4% !important;
+        margin-top: 3% !important;
     }
 }
 @media only screen and (min-width: 970px) and (max-width: 1080px)  {
@@ -205,7 +206,7 @@
         justify-content: flex-start !important;
         display: grid !important;
         height: 50% !important;
-        margin-top: 4% !important;
+        margin-top: 3% !important;
     }
 }
 @media only screen and (min-width: 1080px) and (max-width: 1120px)  {
@@ -221,7 +222,7 @@
         justify-content: flex-start !important;
         display: grid !important;
         height: 50% !important;
-        margin-top: 4% !important;
+        margin-top: 3% !important;
     }
 }
 @media only screen and (min-width: 1120px) and (max-width: 1200px)  {
@@ -237,7 +238,7 @@
         justify-content: flex-start !important;
         display: grid !important;
         height: 50% !important;
-        margin-top: 4% !important;
+        margin-top: 3% !important;
     }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1280px)  {
@@ -253,7 +254,7 @@
         justify-content: flex-start !important;
         display: grid !important;
         height: 50% !important;
-        margin-top: 4% !important;
+        margin-top: 3% !important;
     }
 }
 @media only screen and (min-width: 1280px) and (max-width: 1330px)  {
@@ -269,7 +270,6 @@
         justify-content: flex-start !important;
         display: grid !important;
         height: 50% !important;
-        margin-top: 4% !important;
     }
 }
 @media only screen and (min-width: 1330px) and (max-width: 1400px)  {
@@ -281,7 +281,6 @@
         justify-content: flex-start !important;
         display: grid !important;
         height: 50% !important;
-        margin-top: 4% !important;
     }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1480px)  {
@@ -290,7 +289,6 @@
         justify-content: flex-start !important;
         display: grid !important;
         height: 50% !important;
-        margin-top: 4% !important;
     }
 }
 @media only screen and (min-width: 1480px) and (max-width: 1550px)  {
@@ -299,7 +297,6 @@
         justify-content: flex-start !important;
         display: grid !important;
         height: 50% !important;
-        margin-top: 4% !important;
     }
 }
 @media only screen and (min-width: 1550px) and (max-width: 1650px)  {
@@ -308,7 +305,7 @@
         justify-content: flex-start !important;
         display: grid !important;
         height: 50% !important;
-        margin-top: 4% !important;
+        // margin-top: 4% !important;
     }
 }
 @media only screen and (min-width: 1650px) and (max-width: 1750px)  {
@@ -317,7 +314,6 @@
         justify-content: flex-start !important;
         display: grid !important;
         height: 50% !important;
-        margin-top: 4% !important;
 
     }
 }
@@ -326,6 +322,5 @@
         justify-content: flex-start !important;
         display: grid !important;
         height: 50% !important;
-        margin-top: 3.5% !important;
     }
 }

@@ -3,7 +3,7 @@ import { Button, Typography } from "@mui/material";
 const CustomButton = ({
   text,
   radius = 20,
-  color = "primary",
+  color = "info",
   font = "small",
   height = 40,
   padd = { xs: "5px 30px", lg: "5px 35px" },

@@ -241,10 +241,10 @@ const Register = ({ provinceOptions, citiesList }) => {
                   p: "0px",
                   mr: "10px",
                   "&:hover": {
-                    bgcolor: "info.main",
+                    bgcolor: "warning.main",
                   },
                 }}
-                color="info"
+                color="warning"
                 variant="contained"
               >
                 <Image src={refresh} width="35px" height="35px" />

@@ -36,7 +36,7 @@ const SelectWrapper = ({ name, options, t, setProvince, ...otherProps }) => {
         "& .MuiOutlinedInput-root": {
           backgroundColor: theme.palette.primary.light,
           border: theme.palette.grey.dark,
-          color: theme.palette.primary.dark,
+          color: theme.palette.primary.main,
           borderRadius: "8px",
           textAlign: "right",
         },
