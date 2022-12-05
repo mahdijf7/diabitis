@@ -18,7 +18,7 @@ const SelectWrapper = ({ name, options, t, setProvince, ...otherProps }) => {
     name,
     ...otherProps,
     select: true,
-    variant: "outlined",
+    variant: "filled",
     fullWidth: true,
     label: t.register[name],
     onChange: handleChange,
@@ -29,20 +29,32 @@ const SelectWrapper = ({ name, options, t, setProvince, ...otherProps }) => {
   }
   return (
     <TextField
+      InputProps={{
+        disableUnderline: true,
+        style: {
+          borderRadius: "10px",
+        },
+      }}
       {...configTextField}
       sx={{
         width: "100%",
         m: "15px 0px",
-        "& .MuiOutlinedInput-root": {
+        "& .MuiFormLabel-root": {
+          right: "20px !important",
+          left: "auto !important",
+          transformOrigin: "top right !important",
+        },
+        "& .MuiFilledInput-root": {
           backgroundColor: theme.palette.primary.light,
-          border: theme.palette.grey.dark,
+          border: theme.palette.primary.light,
           color: theme.palette.primary.main,
           borderRadius: "8px",
           textAlign: "right",
+          paddingRight:"0px !important",
+          border:"solid #D1D1D6 1px",
         },
-        "& .MuiInputLabel-root": {
-          right: "30px",
-          left: "auto",
+        "& .MuiFilledInput-input": {
+          paddingRight:"10px !important",
         },
         "& .MuiSelect-icon": {
           right: "auto",

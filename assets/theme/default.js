@@ -13,7 +13,7 @@ export const lightMode = {
     },
     gray: {
       main: "#EDEBEB",
-      light: "#D1D1D6",
+      light: "#D1D1D6"
     },
     info: {
       main: "#FED453",

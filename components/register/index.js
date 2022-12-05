@@ -19,6 +19,7 @@ import FetchApi from "../../services/FetchApi";
 import Image from "next/image";
 import refresh from "../../public/images/register/refresh.svg";
 import CustomSnackbar from "../form/CustomSnackbar";
+import CustomInputFill from "../form/CustomInputFill";
 
 const Register = ({ provinceOptions, citiesList }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -43,23 +44,23 @@ const Register = ({ provinceOptions, citiesList }) => {
   };
   const list = [
     {
-      tag: <CustomInputOutline name="firstname" t={t} />,
+      tag: <CustomInputFill name="firstname" t={t} />,
       sm: 6,
     },
     {
-      tag: <CustomInputOutline name="lastname" t={t} />,
+      tag: <CustomInputFill name="lastname" t={t} />,
       sm: 6,
     },
     {
-      tag: <CustomInputOutline name="idNumber" t={t} />,
+      tag: <CustomInputFill name="idNumber" t={t} />,
       sm: 6,
     },
     {
-      tag: <CustomInputOutline name="nationalCode" t={t} />,
+      tag: <CustomInputFill name="nationalCode" t={t} />,
       sm: 6,
     },
     {
-      tag: <CustomInputOutline name="fathersName" t={t} />,
+      tag: <CustomInputFill name="fathersName" t={t} />,
       sm: 6,
     },
     {
@@ -67,11 +68,11 @@ const Register = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: <CustomInputOutline name="phone" t={t} />,
+      tag: <CustomInputFill name="phone" t={t} />,
       sm: 6,
     },
     {
-      tag: <CustomInputOutline name="mobile" t={t} />,
+      tag: <CustomInputFill name="mobile" t={t} />,
       sm: 6,
     },
     {
@@ -91,11 +92,11 @@ const Register = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: <CustomInputOutline name="email" t={t} />,
+      tag: <CustomInputFill name="email" t={t} />,
       sm: 6,
     },
     {
-      tag: <CustomInputOutline name="postalCode" t={t} />,
+      tag: <CustomInputFill name="postalCode" t={t} />,
       sm: 6,
     },
     {
@@ -114,7 +115,7 @@ const Register = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: <CustomInputOutline name="address" t={t} multiline />,
+      tag: <CustomInputFill name="address" t={t} multiline />,
       sm: 12,
     },
   ];
@@ -213,7 +214,7 @@ const Register = ({ provinceOptions, citiesList }) => {
               </Grid>
             ))}
             <Grid item textAlign="center" xs={12} sm={6}>
-              <CustomInputOutline name="code" t={t} />
+              <CustomInputFill name="code" t={t} />
             </Grid>
             {/* <Grid item textAlign="center" xs={12} sm={6}></Grid> */}
             <Grid
