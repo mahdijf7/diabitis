@@ -71,7 +71,7 @@
     "phone": "تلفن ثابت",
     "mobile": "تلفن همراه",
     "dateOfBirth": "تاریخ تولد",
-    "typeOfDiabetes": "نوع دیابت",
+    "diabetesType": "نوع دیابت",
     "typeOfDiabetes1": "نوع ١",
     "typeOfDiabetes2": "نوع ٢",
     "typeOfDiabetes3": "نوع ٣",
@@ -80,7 +80,7 @@
     "province": "استان",
     "city": "شهر",
     "address": "آدرس",
-    "captcha": "کد امنیتی",
+    "code": "کد امنیتی",
     "confirmInformation": "تایید اطلاعات",
     "accountPrice": "هزینه عضویت سالانه ١٫٠٠٠٫٠٠٠  ریال معادل یکصد هزار تومان می باشد"
   },

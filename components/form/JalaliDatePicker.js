@@ -4,7 +4,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { TextField, useTheme } from "@mui/material";
 
-export default function JalaliDatePicker({text}) {
+export default function JalaliDatePicker({ text }) {
   const [value, setValue] = useState(null);
   const theme = useTheme();
 
@@ -14,6 +14,25 @@ export default function JalaliDatePicker({text}) {
         label={text}
         mask="____/__/__"
         value={value}
+        PopperProps={{
+          sx: {
+            "& .MuiPaper-root": {
+              "& .Mui-selected": {
+                color: "white",
+                backgroundColor: "secondary.main",
+                "&:hover": {
+                  backgroundColor: "secondary.main",
+                },
+                "&:focus": {
+                  backgroundColor: "secondary.main",
+                },
+              },
+              "& .MuiSvgIcon-root": {
+                rotate: "180deg",
+              },
+            },
+          },
+        }}
         onChange={(newValue) => setValue(newValue)}
         renderInput={(params) => (
           <TextField
