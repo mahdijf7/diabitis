@@ -21,6 +21,11 @@ const TextFieldCustom = styled(TextField)(({ theme }) => ({
     border: "solid #D1D1D6 1px",
     borderRadius: "8px",
   },
+  "& .MuiFilledInput-input": {
+    "&:-webkit-autofill":{
+      borderRadius: "inherit",
+    },
+  },
 }));
 const CustomInputFill = ({ name, disabled, t, multiline, ...otherProps }) => {
   const [field, meta] = useField(name);
