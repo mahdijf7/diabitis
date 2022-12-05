@@ -50,11 +50,17 @@ const SelectWrapper = ({ name, options, t, setProvince, ...otherProps }) => {
           color: theme.palette.primary.main,
           borderRadius: "8px",
           textAlign: "right",
-          paddingRight:"0px !important",
-          border:"solid #D1D1D6 1px",
+          paddingRight: "0px !important",
+          border: "solid #D1D1D6 1px",
         },
         "& .MuiFilledInput-input": {
-          paddingRight:"10px !important",
+          paddingRight: "10px !important",
+          backgroundColor: theme.palette.primary.light,
+          borderRadius: "8px",
+          "&:focus": {
+            backgroundColor: theme.palette.primary.light,
+            borderRadius: "8px",
+          },
         },
         "& .MuiSelect-icon": {
           right: "auto",
