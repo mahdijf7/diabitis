@@ -10,7 +10,6 @@ import { Form, Formik } from "formik";
 import * as Yup from "yup";
 import t from "../../public/locales/defualt/common.json";
 import TableFrameEdit from "../form/TableFrameEdit";
-import CustomInputOutline from "../form/CustomInputOutline";
 import SelectWrapper from "../form/SelectWrapper";
 import Bell from "./Bell";
 import SubmitButtonFill from "../form/SubmitButtonFill";
