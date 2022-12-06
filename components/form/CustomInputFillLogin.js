@@ -29,16 +29,16 @@ const TextFieldCustom = styled(TextField)(({ theme }) => ({
     },
   },
 }));
-const CustomInputFillLogin = ({ name, disabled, t, multiline, ...otherProps }) => {
+const CustomInputFillLogin = ({ name, disabled, t }) => {
   const [field, meta] = useField(name);
+  field.value = field.value || ""
+  
   const configTextField = {
     ...field,
-    ...otherProps,
     disabled: !!disabled,
     fullWidth: true,
     variant: "filled", //outlined
     placeholder: t,
-    multiline: !!multiline,
   };
   if (meta && meta.error && meta.touched) {
     configTextField.error = true;
@@ -50,15 +50,15 @@ const CustomInputFillLogin = ({ name, disabled, t, multiline, ...otherProps }) =
         disableUnderline: true,
         sx: {
           borderRadius: "10px",
-          fontSize:  "18px" ,
-          '@media (max-width: 420px)' : {
-            fontSize:  "13px" ,
+          fontSize: "18px",
+          "@media (max-width: 420px)": {
+            fontSize: "13px",
           },
-          '@media (min-width: 420px) and (max-width: 600px)' : {
-            fontSize:  "14px" ,
+          "@media (min-width: 420px) and (max-width: 600px)": {
+            fontSize: "14px",
           },
-          '@media (min-width: 600px) and (max-width: 960px)' : {
-            fontSize:  "16px" ,
+          "@media (min-width: 600px) and (max-width: 960px)": {
+            fontSize: "16px",
           },
         },
       }}

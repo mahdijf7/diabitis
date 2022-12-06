@@ -14,13 +14,16 @@ import FetchApi from "../../services/FetchApi";
 import TableFrameLogin from "../form/TableFrameLogin";
 import CustomInputFillLogin from "../form/CustomInputFillLogin";
 import CustomSnackbar from "../form/CustomSnackbar";
+import { useRouter } from "next/router";
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [snackData, setSnackData] = useState();
-  const [disabledCod, setDisabledCod] = useState(true);
+  const [disabledCode, setDisabledCode] = useState(true);
   const [disabledMobile, setDisabledMobile] = useState(false);
+
+  const router = useRouter()
 
   const list = [
     {
@@ -52,7 +55,7 @@ const Login = () => {
         <CustomInputFillLogin
           name="code"
           t={t.login.codedes}
-          disabled={disabledCod}
+          disabled={disabledCode}
         />
       ),
     },
@@ -60,7 +63,7 @@ const Login = () => {
   const Validation_Schema = Yup.object({
     nationalCode: Yup.number().required(t.all.required),
     mobile: Yup.number().required(t.all.required),
-    code: Yup.number().required(t.all.required),
+    code: Yup.number()
   });
   const initialValuesCreate = {
     nationalCode: "",
@@ -68,15 +71,40 @@ const Login = () => {
     code: "",
   };
   const handleSubmit = async (values) => {
-    setIsLoading(true);
-    // const res = await FetchApi("", "fa", "register", values);
-    // setSnackData({
-    //   title: t.all[res.success ? "success" : "error"],
-    //   type: res.success ? "success" : "error",
-    //   des: res.message,
-    // });
-    // setOpenSnackbar(true);
-    setIsLoading(false);
+    if (disabledCode) {
+      delete values.code;
+      setIsLoading(true);
+      const res = await FetchApi("", "fa", "sendCode", values);
+      setSnackData({
+        title: t.all[res.success ? "success" : "error"],
+        type: res.success ? "success" : "error",
+        des: res.message,
+      });
+      setOpenSnackbar(true);
+      setIsLoading(false);
+      if (res.success) {
+        setDisabledMobile(true);
+        setDisabledCode(false);
+      }
+    } else {
+      setIsLoading(true);
+      const res = await FetchApi("", "fa", "login", values);
+      setSnackData({
+        title: t.all[res.success ? "success" : "error"],
+        type: res.success ? "success" : "error",
+        des: res.message,
+      });
+      setOpenSnackbar(true);
+      setIsLoading(false);
+      if (res.success) {
+        router.push("/");
+      } else {
+        if (res.status == 401) {
+          setDisabledMobile(false);
+          setDisabledCode(true);
+        }
+      }
+    }
   };
   return (
     <Container
@@ -168,7 +196,7 @@ const Login = () => {
                           }}
                           color="text.secondary"
                         >
-                          {t.login.sendCode}
+                          {disabledCode ? t.login.sendCode : t.login.letsgo}
                         </Typography>
                       ) : (
                         <CircularProgress size={20} />

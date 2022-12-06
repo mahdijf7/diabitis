@@ -5,6 +5,8 @@ const SelectWrapper = ({ name, options, t, setProvince, ...otherProps }) => {
   const theme = useTheme();
   const { setFieldValue } = useFormikContext();
   const [field, meta] = useField(name);
+  field.value = field.value || ""
+
   const handleChange = (event) => {
     const { value } = event.target;
     setFieldValue(name, value);

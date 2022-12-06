@@ -7,6 +7,7 @@ const CustomButton = ({
   font = "small",
   height = 40,
   padd = { xs: "5px 30px", lg: "5px 35px" },
+  onClick = () => {},
   ...otherprops
 }) => {
   switch (font) {
@@ -27,6 +28,7 @@ const CustomButton = ({
     <Button
       variant="contained"
       color={color}
+      onClick={onClick}
       sx={{
         height: height + "px",
         borderRadius: `${radius}px`,

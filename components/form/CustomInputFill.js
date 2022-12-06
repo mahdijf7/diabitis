@@ -39,6 +39,8 @@ const TextFieldCustom = styled(TextField)(({ theme }) => ({
 }));
 const CustomInputFill = ({ name, disabled, t, multiline, ...otherProps }) => {
   const [field, meta] = useField(name);
+  field.value = field.value || ""
+  
   const configTextField = {
     ...field,
     ...otherProps,

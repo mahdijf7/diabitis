@@ -1,8 +1,10 @@
 import { Box, Grid, Toolbar, Typography } from "@mui/material";
 import CustomButton from "../../utiles/CustomButton";
 import t from "../../../public/locales/defualt/common.json";
+import { useRouter } from "next/router";
 
 const NavBarDown = ({ maxWidth, list }) => {
+  const router = useRouter();
   return (
     <Toolbar sx={{ maxHeight: "60px" }}>
       <Box width="100%" m="auto" maxWidth={maxWidth}>
@@ -19,7 +21,12 @@ const NavBarDown = ({ maxWidth, list }) => {
             </Grid>
           ))}
           <Grid item xs={14} display="flex" justifyContent="flex-end">
-            <CustomButton text={t.header.test} />
+            <CustomButton
+              onClick={() => {
+                router.push("/login");
+              }}
+              text={t.header.test}
+            />
           </Grid>
         </Grid>
       </Box>

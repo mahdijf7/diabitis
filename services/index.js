@@ -18,6 +18,20 @@ class Services {
       },
     });
   }
+  async sendCode(token, lang, request) {
+    return await axios.post(`${BaseUrlV1}${Auth}/send-code`, request, {
+      headers: {
+        "accept-language": lang,
+      },
+    });
+  }
+  async login(token, lang, request) {
+    return await axios.post(`${BaseUrlV1}${Auth}/login`, request, {
+      headers: {
+        "accept-language": lang,
+      },
+    });
+  }
   async register(token, lang, request) {
     return await axios.post(`${BaseUrlV1}${Auth}/register`, request, {
       headers: {
