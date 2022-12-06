@@ -1,7 +1,7 @@
 import Content from "../components/register";
 import FetchApi from "../services/FetchApi";
 
-const Account = ({ provinceList, citiesList }) => {
+const Index = ({ provinceList, citiesList }) => {
   return (
     <>
       <Content  provinceOptions={provinceList} citiesList={citiesList} />
@@ -9,7 +9,7 @@ const Account = ({ provinceList, citiesList }) => {
   );
 };
 
-export default Account;
+export default Index;
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library

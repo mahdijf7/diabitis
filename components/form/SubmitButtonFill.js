@@ -15,7 +15,7 @@ const SubmitButtonFill = ({ children, sx, ...otherProps }) => {
     <Button
       color="info"
       sx={{
-        height: "56px",
+        height: { sm: "56px", sx: "45px" },
         backgroundColor: "info.main",
         color: "common.white",
         boxShadow: "none",

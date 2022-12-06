@@ -9,7 +9,7 @@ import {
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
 import t from "../../public/locales/defualt/common.json";
-import TableFrameEdit from "../form/TableFrameEdit";
+import TableFrameRegister from "../form/TableFrameRegister";
 import SelectWrapper from "../form/SelectWrapper";
 import Bell from "./Bell";
 import SubmitButtonFill from "../form/SubmitButtonFill";
@@ -202,7 +202,7 @@ const Register = ({ provinceOptions, citiesList }) => {
         onSubmit={handleSubmit}
       >
         <Form>
-          <TableFrameEdit
+          <TableFrameRegister
             notFoundText={"account.noData"}
             data={initialValuesCreate}
           >
@@ -272,7 +272,7 @@ const Register = ({ provinceOptions, citiesList }) => {
               </Grid>
               {<Grid item xs={12} sm={6}></Grid>}
             </Box>
-          </TableFrameEdit>
+          </TableFrameRegister>
         </Form>
       </Formik>
     </>
