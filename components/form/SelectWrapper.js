@@ -31,8 +31,18 @@ const SelectWrapper = ({ name, options, t, setProvince, ...otherProps }) => {
     <TextField
       InputProps={{
         disableUnderline: true,
-        style: {
+        sx: {
           borderRadius: "10px",
+          fontSize:  "18px" ,
+          '@media (max-width: 420px)' : {
+            fontSize:  "13px" ,
+          },
+          '@media (min-width: 420px) and (max-width: 600px)' : {
+            fontSize:  "14px" ,
+          },
+          '@media (min-width: 600px) and (max-width: 960px)' : {
+            fontSize:  "16px" ,
+          },
         },
       }}
       {...configTextField}
@@ -43,6 +53,16 @@ const SelectWrapper = ({ name, options, t, setProvince, ...otherProps }) => {
           right: "20px !important",
           left: "auto !important",
           transformOrigin: "top right !important",
+          fontSize:  "18px" ,
+          '@media (max-width: 420px)' : {
+            fontSize:  "13px" ,
+          },
+          '@media (min-width: 420px) and (max-width: 600px)' : {
+            fontSize:  "14px" ,
+          },
+          '@media (min-width: 600px) and (max-width: 960px)' : {
+            fontSize:  "16px" ,
+          },
         },
         "& .MuiFilledInput-root": {
           backgroundColor: theme.palette.primary.light,

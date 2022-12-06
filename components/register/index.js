@@ -262,7 +262,7 @@ const Register = ({ provinceOptions, citiesList }) => {
               <Grid item xs={12} sm={6}>
                 <SubmitButtonFill fullWidth={true} disabled={isLoading}>
                   {!isLoading ? (
-                    <Typography variant={"h4"} color="text.secondary">
+                    <Typography sx={{ typography: { xs:"body4",sm:"subtitle3" , md: "body2", lg: "h4" } }}  color="text.secondary">
                       {t.register.confirmInformation}
                     </Typography>
                   ) : (

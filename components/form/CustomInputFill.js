@@ -9,6 +9,16 @@ const TextFieldCustom = styled(TextField)(({ theme }) => ({
     right: "20px !important",
     left: "auto !important",
     transformOrigin: "top right !important",
+    fontSize:  "18px" ,
+    '@media (max-width: 420px)' : {
+      fontSize:  "13px" ,
+    },
+    '@media (min-width: 420px) and (max-width: 600px)' : {
+      fontSize:  "14px" ,
+    },
+    '@media (min-width: 600px) and (max-width: 960px)' : {
+      fontSize:  "16px" ,
+    },
   },
   "& input": {
     "&:-webkit-autofill": {
@@ -22,7 +32,7 @@ const TextFieldCustom = styled(TextField)(({ theme }) => ({
     borderRadius: "8px",
   },
   "& .MuiFilledInput-input": {
-    "&:-webkit-autofill":{
+    "&:-webkit-autofill": {
       borderRadius: "inherit",
     },
   },
@@ -46,8 +56,18 @@ const CustomInputFill = ({ name, disabled, t, multiline, ...otherProps }) => {
     <TextFieldCustom
       InputProps={{
         disableUnderline: true,
-        style: {
+        sx: {
           borderRadius: "10px",
+          fontSize:  "18px" ,
+          '@media (max-width: 420px)' : {
+            fontSize:  "13px" ,
+          },
+          '@media (min-width: 420px) and (max-width: 600px)' : {
+            fontSize:  "14px" ,
+          },
+          '@media (min-width: 600px) and (max-width: 960px)' : {
+            fontSize:  "16px" ,
+          },
         },
       }}
       {...configTextField}
