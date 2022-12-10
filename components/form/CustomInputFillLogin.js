@@ -22,6 +22,8 @@ const TextFieldCustom = styled(TextField)(({ theme }) => ({
     },
   },
   "& input": {
+    paddingBottom: "22px",
+    paddingTop: "22px",
     "&::placeholder": {
       // textOverflow: 'ellipsis !important',
       color: theme.palette.common.black,

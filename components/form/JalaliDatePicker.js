@@ -31,6 +31,13 @@ export default function JalaliDatePicker({ text }) {
                 rotate: "180deg",
               },
             },
+            "& .MuiButtonBase": {
+              "& .MuiIconButton-root": {
+                "& .MuiPickersArrowSwitcher-root": {
+                  rotate: "180deg",
+                },
+              },
+            },
           },
         }}
         onChange={(newValue) => setValue(newValue)}
@@ -63,15 +70,15 @@ export default function JalaliDatePicker({ text }) {
               "& .MuiInputLabel-root": {
                 right: "30px",
                 left: "auto",
-                fontSize:  "18px" ,
-                '@media (max-width: 420px)' : {
-                  fontSize:  "13px" ,
+                fontSize: "18px",
+                "@media (max-width: 420px)": {
+                  fontSize: "13px",
                 },
-                '@media (min-width: 420px) and (max-width: 600px)' : {
-                  fontSize:  "14px" ,
+                "@media (min-width: 420px) and (max-width: 600px)": {
+                  fontSize: "14px",
                 },
-                '@media (min-width: 600px) and (max-width: 960px)' : {
-                  fontSize:  "16px" ,
+                "@media (min-width: 600px) and (max-width: 960px)": {
+                  fontSize: "16px",
                 },
               },
             }}
@@ -81,15 +88,15 @@ export default function JalaliDatePicker({ text }) {
           disableUnderline: true,
           sx: {
             borderRadius: "10px",
-            fontSize:  "18px" ,
-            '@media (max-width: 420px)' : {
-              fontSize:  "13px" ,
+            fontSize: "18px",
+            "@media (max-width: 420px)": {
+              fontSize: "13px",
             },
-            '@media (min-width: 420px) and (max-width: 600px)' : {
-              fontSize:  "14px" ,
+            "@media (min-width: 420px) and (max-width: 600px)": {
+              fontSize: "14px",
             },
-            '@media (min-width: 600px) and (max-width: 960px)' : {
-              fontSize:  "16px" ,
+            "@media (min-width: 600px) and (max-width: 960px)": {
+              fontSize: "16px",
             },
           },
         }}
