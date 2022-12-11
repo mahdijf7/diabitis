@@ -1,7 +1,7 @@
 import { TextField, MenuItem, useTheme } from "@mui/material";
 import { useField, useFormikContext } from "formik";
 
-const SelectWrapper = ({ name, options, t, setProvince, ...otherProps }) => {
+const SelectWrapper = ({ name, options, text, setProvince, ...otherProps }) => {
   const theme = useTheme();
   const { setFieldValue } = useFormikContext();
   const [field, meta] = useField(name);
@@ -22,7 +22,7 @@ const SelectWrapper = ({ name, options, t, setProvince, ...otherProps }) => {
     select: true,
     variant: "filled",
     fullWidth: true,
-    label: t.register[name],
+    label: text,
     onChange: handleChange,
   };
   if (meta && meta.error && meta.touched) {
@@ -97,7 +97,6 @@ const SelectWrapper = ({ name, options, t, setProvince, ...otherProps }) => {
       {options.map((el, index) => {
         return (
           <MenuItem
-            placeholder={el.label}
             key={index}
             value={el.id}
             sx={{ zIndex: 99999 }}

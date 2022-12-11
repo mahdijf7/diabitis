@@ -37,7 +37,7 @@ const TextFieldCustom = styled(TextField)(({ theme }) => ({
     },
   },
 }));
-const CustomInputFill = ({ name, disabled, t, multiline, ...otherProps }) => {
+const CustomInputFill = ({ name, disabled, text, multiline, ...otherProps }) => {
   const [field, meta] = useField(name);
   field.value = field.value || ""
   
@@ -47,7 +47,7 @@ const CustomInputFill = ({ name, disabled, t, multiline, ...otherProps }) => {
     disabled: !!disabled,
     fullWidth: true,
     variant: "filled", //outlined
-    label: t.register[name],
+    label: text,
     multiline: !!multiline,
   };
   if (meta && meta.error && meta.touched) {
