@@ -10,17 +10,20 @@ import SubmitButtonFill from "../form/SubmitButtonFill";
 const SelectCustom = () => {
   const router = useRouter();
   const memberOptions = [
-    { name: t.home.real, id: "1" },
-    { name: t.home.regal, id: "2" },
+    { name: t.home.patient, id: "patient" },
+    { name: t.home.doctor, id: "doctor" },
+    { name: t.home.company, id: "company" },
+    { name: t.home.agent, id: "agent" },
   ];
   const initialValuesCreate = {
     member: "",
   };
   const Validation_Schema = Yup.object({
-    member: Yup.string(),
+    member: Yup.string().required(t.all.required),
   });
-  const handleSubmit = () => {
-    router.push("/register");
+  const handleSubmit = (values) => {
+    console.log(values);
+    router.push(`/register/${values.member}`);
   };
   return (
     <Box className={style.boxButton}>
@@ -36,7 +39,11 @@ const SelectCustom = () => {
           onSubmit={handleSubmit}
         >
           <Form>
-            <SelectWrapper name="member" options={memberOptions} t={t} />
+            <SelectWrapper
+              name="member"
+              options={memberOptions}
+              text={t.home.membershipType}
+            />
             <SubmitButtonFill fullWidth={true}>
               <Typography
                 sx={{

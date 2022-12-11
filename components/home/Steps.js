@@ -9,6 +9,7 @@ import {
 import Image from "next/image";
 import t from "../../public/locales/defualt/common.json";
 import style from "../../styles/Home.module.scss";
+import numberCircle from "../../public/images/home/numberCircle.svg";
 
 const Steps = () => {
   const isMatch = useMediaQuery("(max-width:1429px)");
@@ -25,6 +26,7 @@ const Steps = () => {
     alignItems: "center",
     justifyContent: "center",
     p: { lg: "5%", md: "3%" },
+    position: "relative",
   };
   const list = [
     {
@@ -55,6 +57,34 @@ const Steps = () => {
       sizeImage = "90px";
       break;
   }
+  const NumberCircle = ({ index }) => {
+    return (
+      <Box
+        bgcolor="common.white"
+        position="absolute"
+        width={{ md: "70px", sm: "55px", xs: "40px" }}
+        height={{ md: "70px", sm: "55px", xs: "40px" }}
+        right={{ md: "-30px", sm: "-23px", xs: "-17px" }}
+        left="auto"
+        top={{ md: "-30px", sm: "-23px", xs: "-17px" }}
+        borderRadius="50%"
+      >
+        <Typography
+          position="absolute"
+          color="secondary.main"
+          right={{ md: "27px", sm: "22px", xs: "15px" }}
+          top={{ md: "15px", sm: "12px", xs: "6px" }}
+          sx={{
+            typography: { md: "h1", sm: "h2", xs: "h4" },
+            fontWeight: "700 !important",
+          }}
+        >
+          {index + 1}
+        </Typography>
+        <Image src={numberCircle} alt="" width="100%" height="100%" />
+      </Box>
+    );
+  };
   const Card = ({ index }) => {
     return (
       <Box textAlign="center" px={isMini ? "2px" : "8px"}>
@@ -81,7 +111,11 @@ const Steps = () => {
     );
   };
   return (
-    <Container disableGutters maxWidth={false} sx={{pb:"5%", pt:{md:"0px", xs:"5%"}}}>
+    <Container
+      disableGutters
+      maxWidth={false}
+      sx={{ pb: "5%", pt: { md: "0px", xs: "5%" } }}
+    >
       <Typography
         color="text.primary"
         sx={{
@@ -90,6 +124,7 @@ const Steps = () => {
             lg: "h2",
             xs: isMini ? "subtitle5" : "subtitle3",
           },
+          mb:{xs:"30px"}
         }}
         component="h1"
         textAlign="center"
@@ -121,6 +156,7 @@ const Steps = () => {
             height={{ lg: "80%", md: "70%", xs: "70%" }}
             sx={styleCard}
           >
+            <NumberCircle index={0} />
             <Card index={0} />
           </Box>
           <Box display="flex" width={{ md: "9.5%", xs: isMini ? "5%" : "8%" }}>
@@ -139,6 +175,7 @@ const Steps = () => {
           <Box width={isMini ? "30%" : "28%"}>
             <Box height="20%" />
             <Box height={{ lg: "80%", md: "70%", xs: "70%" }} sx={styleCard}>
+              <NumberCircle index={1} />
               <Card index={1} />
             </Box>
           </Box>
@@ -160,6 +197,7 @@ const Steps = () => {
             height={{ lg: "80%", md: "70%", xs: "70%" }}
             sx={styleCard}
           >
+            <NumberCircle index={2} />
             <Card index={2} />
           </Box>
         </Box>
