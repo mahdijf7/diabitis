@@ -2,7 +2,8 @@
 import Content from "../components/login";
 
 export default function Index() {
-  return <Content />;
+  // return <Content />;
+  return <></>;
 }
 
 export async function getStaticProps() {

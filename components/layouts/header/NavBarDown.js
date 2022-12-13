@@ -23,7 +23,8 @@ const NavBarDown = ({ maxWidth, list }) => {
           <Grid item xs={14} display="flex" justifyContent="flex-end">
             <CustomButton
               onClick={() => {
-                router.push("/login");
+                // router.push("/login");
+                router.push("/");
               }}
               text={t.header.test}
             />

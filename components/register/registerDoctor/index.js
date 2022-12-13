@@ -32,9 +32,7 @@ const RegisterDoctor = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: (
-        <CustomInputFill name="lastname" text={t.registerDoctor.lastname} />
-      ),
+      tag: <CustomInputFill name="lastname" text={t.registerDoctor.lastname} />,
       sm: 6,
     },
     {
@@ -76,19 +74,13 @@ const RegisterDoctor = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: (
-        <CustomInputFill
-          name="specialty"
-          text={t.registerDoctor.specialty}
-        />
-      ),
+      tag: <CustomInputFill name="field" text={t.registerDoctor.specialty} />,
       sm: 6,
     },
     {
       tag: (
         <CustomInputFill
-          name="
-          medicalNumber"
+          name="medicalNumber"
           text={t.registerDoctor.medicalNumber}
         />
       ),
@@ -103,7 +95,7 @@ const RegisterDoctor = ({ provinceOptions, citiesList }) => {
     email: Yup.string().email().required(t.all.required),
     province: Yup.string().required(t.all.required),
     city: Yup.string().required(t.all.required),
-    specialty: Yup.string().required(t.all.required),
+    field: Yup.string().required(t.all.required),
     medicalNumber: Yup.number().required(t.all.required),
     code: Yup.string().required(t.all.required),
   });
@@ -129,6 +121,7 @@ const RegisterDoctor = ({ provinceOptions, citiesList }) => {
     setLoadrefresh(false);
   };
   const initialValuesCreate = {
+    type: "doctor",
     firstname: "",
     lastname: "",
     nationalCode: "",
@@ -136,7 +129,7 @@ const RegisterDoctor = ({ provinceOptions, citiesList }) => {
     email: "",
     province: "",
     city: "",
-    specialty: "",
+    field: "",
     medicalNumber: "",
     code: "",
   };
@@ -176,8 +169,7 @@ const RegisterDoctor = ({ provinceOptions, citiesList }) => {
                 {el.tag}
               </Grid>
             ))}
-            <Grid item textAlign="center" xs={12} sm={6}>
-            </Grid>
+            <Grid item textAlign="center" xs={12} sm={6}></Grid>
             <Grid item textAlign="center" xs={12} sm={6}>
               <CustomInputFill name="code" text={t.registerDoctor.code} />
             </Grid>

@@ -8,7 +8,7 @@ import SelectWrapper from "../../form/SelectWrapper";
 import Bell from "./Bell";
 import SubmitButtonFill from "../../form/SubmitButtonFill";
 import FetchApi from "../../../services/FetchApi";
-import JalaliDatePicker from "../form/JalaliDatePicker";
+import JalaliDatePicker from "../../form/JalaliDatePicker";
 import Image from "next/image";
 import refresh from "../../../public/images/register/refresh.svg";
 import CustomSnackbar from "../../form/CustomSnackbar";
