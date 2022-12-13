@@ -32,9 +32,9 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
     { name: t.register.countryCodeIran, id: "countryCodeIran" },
   ];
   const typeOfDiabetesOptions = [
-    { name: t.register.typeOfDiabetes1, id: "1" },
-    { name: t.register.typeOfDiabetes2, id: "2" },
-    { name: t.register.typeOfDiabetes3, id: "3" },
+    { name: t.register.typeOfDiabetes1, id: "A" },
+    { name: t.register.typeOfDiabetes2, id: "B" },
+    { name: t.register.typeOfDiabetes3, id: "C" },
   ];
   const _setProvince = (id) => {
     setCityOptions(citiesList[id] || []);
