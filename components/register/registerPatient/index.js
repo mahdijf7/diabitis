@@ -225,6 +225,7 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
   };
 
   const handleSubmit = async (values) => {
+    delete values.countryCode
     if (values.birthDateAt == "") delete values.birthDateAt;
     setIsLoading(true);
     values.hashKey = hashKey;
