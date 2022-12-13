@@ -11,6 +11,7 @@ import {
   useTheme,
   Skeleton,
   Box,
+  useMediaQuery,
 } from "@mui/material";
 import t from "../../public/locales/defualt/common.json";
 import arrowMore from "../../public/images/news/arrowMore.svg";
@@ -19,24 +20,46 @@ const baseUrl = "http://162.55.95.245:7050";
 
 const CardsCustom = ({ data, isLoading }) => {
   const theme = useTheme();
+  const isMatch = useMediaQuery("(max-width:1150px)");
+  const isMidle = useMediaQuery("(max-width:850px)");
 
   return (
-    <Grid container spacing={5}>
+    <Grid container>
       {isLoading
         ? Array.from(new Array(12)).map((el, index) => (
             <Grid key={index} item md={3} sm={4} xs={12}>
-            <Card sx={{ boxShadow: theme.customShadows.widget }}>
-            <Skeleton variant="rectangular" height={118} />
-            <Box sx={{ pt: 0.5 }}>
-              <Skeleton />
-              <Skeleton width="60%" />
-            </Box>
-            </Card>
+              <Card
+                sx={{
+                  boxShadow: theme.customShadows.widget,
+                  width: "90%",
+                  mx: "auto",
+                  mb: "10%",
+                }}
+              >
+                <Skeleton variant="rectangular" height={118} />
+                <Box sx={{ pt: 0.5 }}>
+                  <Skeleton />
+                  <Skeleton width="60%" />
+                </Box>
+              </Card>
             </Grid>
           ))
         : data.map((el, index) => (
-            <Grid key={index} item md={3} sm={4} xs={12}>
-              <Card sx={{ boxShadow: theme.customShadows.widget }}>
+            <Grid
+              key={index}
+              item
+              md={isMatch ? 4 : 3}
+              sm={isMidle ? 6 : 4}
+              xs={12}
+            >
+              <Card
+                sx={{
+                  boxShadow: theme.customShadows.widget,
+                  width: "90%",
+                  mx: "auto",
+                  mb: "10%",
+                }}
+              >
                 <CardMedia
                   component="img"
                   height="200"

@@ -44,7 +44,7 @@ const PaginationCustom = () => {
   };
 
   return (
-    <Container sx={{ py: 5 }}>
+    <Container disableGutters sx={{ py: 5 }}>
       {!isLoading && !data[0] ? (
         <Box
           display="flex"
