@@ -18,6 +18,13 @@ class Services {
       },
     });
   }
+  async getNews(token, lang, request, query) {
+    return await axios.get(`${BaseUrlV1}${Web}/news${query}`, {
+      headers: {
+        "accept-language": lang,
+      },
+    });
+  }
   async sendCode(token, lang, request) {
     return await axios.post(`${BaseUrlV1}${Auth}/send-code`, request, {
       headers: {

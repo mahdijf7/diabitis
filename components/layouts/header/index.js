@@ -41,6 +41,11 @@ export default function Header() {
       col: 3,
     },
     {
+      label: t.header.news,
+      link: "/news",
+      col: 3,
+    },
+    {
       label: t.header.service,
       link: "/",
       col: 3,
