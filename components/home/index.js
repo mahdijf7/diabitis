@@ -4,8 +4,6 @@ import MultiplePagesCrouselMini from "../carousel/MultiplePagesMini";
 import SinglePageCrousel from "../carousel/SinglePage";
 import SinglePageCrouselMini from "../carousel/SinglePageMini";
 import Cards from "./Cards";
-import Register from "./Register";
-import RegisterMini from "./RegisterMini";
 import Steps from "./Steps";
 import VideoBanner from "./VideoBanner";
 import Device from "./Device";
