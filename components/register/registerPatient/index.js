@@ -41,39 +41,25 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
   };
   const list = [
     {
-      tag: (
-        <CustomInputFill name="firstname" text={t.register.firstname} />
-      ),
+      tag: <CustomInputFill name="firstname" text={t.register.firstname} />,
+      sm: 6,
+    },
+    {
+      tag: <CustomInputFill name="lastname" text={t.register.lastname} />,
+      sm: 6,
+    },
+    {
+      tag: <CustomInputFill name="idNumber" text={t.register.idNumber} />,
       sm: 6,
     },
     {
       tag: (
-        <CustomInputFill name="lastname" text={t.register.lastname} />
+        <CustomInputFill name="nationalCode" text={t.register.nationalCode} />
       ),
       sm: 6,
     },
     {
-      tag: (
-        <CustomInputFill name="idNumber" text={t.register.idNumber} />
-      ),
-      sm: 6,
-    },
-    {
-      tag: (
-        <CustomInputFill
-          name="nationalCode"
-          text={t.register.nationalCode}
-        />
-      ),
-      sm: 6,
-    },
-    {
-      tag: (
-        <CustomInputFill
-          name="fathersName"
-          text={t.register.fathersName}
-        />
-      ),
+      tag: <CustomInputFill name="fathersName" text={t.register.fathersName} />,
       sm: 6,
     },
     {
@@ -129,9 +115,7 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: (
-        <CustomInputFill name="postalCode" text={t.register.postalCode} />
-      ),
+      tag: <CustomInputFill name="postalCode" text={t.register.postalCode} />,
       sm: 6,
     },
     {
@@ -157,11 +141,7 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
     },
     {
       tag: (
-        <CustomInputFill
-          name="address"
-          text={t.register.address}
-          multiline
-        />
+        <CustomInputFill name="address" text={t.register.address} multiline />
       ),
       sm: 12,
     },
@@ -205,6 +185,7 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
     setLoadrefresh(false);
   };
   const initialValuesCreate = {
+    type: "patient",
     firstname: "",
     lastname: "",
     idNumber: "",
@@ -225,7 +206,7 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
   };
 
   const handleSubmit = async (values) => {
-    delete values.countryCode
+    delete values.countryCode;
     if (values.birthDateAt == "") delete values.birthDateAt;
     setIsLoading(true);
     values.hashKey = hashKey;
