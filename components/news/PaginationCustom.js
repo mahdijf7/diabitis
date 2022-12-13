@@ -1,7 +1,15 @@
-import { Container, Pagination, Stack, useTheme } from "@mui/material";
+import {
+  Box,
+  Container,
+  Pagination,
+  Stack,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import { useEffect, useState } from "react";
 import CardsCustom from "./CardsCustom";
 import FetchApi from "../../services/FetchApi";
+import t from "../../public/locales/defualt/common.json";
 
 const PaginationCustom = () => {
   const theme = useTheme();
@@ -9,13 +17,16 @@ const PaginationCustom = () => {
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
   const [totalPages, setTotalPages] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
   const getNews = async (p = 1) => {
+    setIsLoading(true);
     const res = await FetchApi("", "fa", "getNews", {}, `?page=${p}&limit=12`);
     if (res.success) {
       setData(res.dataBody.list);
       setTotalPages(res.dataBody.pages);
     }
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -26,7 +37,7 @@ const PaginationCustom = () => {
   }, []);
 
   const handleChange = async (e, p) => {
-    if (p > 0 && p <= totalPages) {
+    if (p > 0 && p <= totalPages && p != page) {
       setPage(p);
       await getNews(p);
     }
@@ -34,7 +45,18 @@ const PaginationCustom = () => {
 
   return (
     <Container sx={{ py: 5 }}>
-      <CardsCustom data={data} />
+      {!isLoading && !data[0] ? (
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          sx={{ width: "100%", height: "10vw" }}
+        >
+          <Typography variant="h2">{t.all.noData}</Typography>
+        </Box>
+      ) : (
+        <CardsCustom data={data} isLoading={isLoading} />
+      )}
       <Stack alignItems="center" spacing={2}>
         <Pagination
           dir="ltr"
