@@ -8,7 +8,7 @@ export const lightMode = {
     },
     secondary: {
       main: "#2DA6F7",
-      light: "#45A9A399",
+      light: "#2DA6F799",
       // dark: "",
     },
     gray: {

@@ -21,8 +21,6 @@ const RegisterCompany = ({ provinceOptions, citiesList }) => {
   const [hashKey, setHashKey] = useState(null);
   const [cityOptions, setCityOptions] = useState([]);
 
-
-
   const _setProvince = (id) => {
     setCityOptions(citiesList[id] || []);
   };
@@ -54,10 +52,7 @@ const RegisterCompany = ({ provinceOptions, citiesList }) => {
     },
     {
       tag: (
-        <CustomInputFill
-          name="companyName"
-          text={t.registerCompany.companyName}
-        />
+        <CustomInputFill name="company" text={t.registerCompany.companyName} />
       ),
       sm: 6,
     },
@@ -102,7 +97,7 @@ const RegisterCompany = ({ provinceOptions, citiesList }) => {
     lastname: Yup.string().required(t.all.required),
     nationalCode: Yup.number().required(t.all.required),
     mobile: Yup.number().required(t.all.required),
-    companyName: Yup.string().required(t.all.required),
+    company: Yup.string().required(t.all.required),
     email: Yup.string().email().required(t.all.required),
     province: Yup.string().required(t.all.required),
     city: Yup.string().required(t.all.required),
@@ -131,11 +126,12 @@ const RegisterCompany = ({ provinceOptions, citiesList }) => {
     setLoadrefresh(false);
   };
   const initialValuesCreate = {
+    type: "company",
     firstname: "",
     lastname: "",
     nationalCode: "",
     mobile: "",
-    companyName: "",
+    company: "",
     email: "",
     province: "",
     city: "",

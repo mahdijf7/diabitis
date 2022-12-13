@@ -32,9 +32,7 @@ const RegisterAgent = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: (
-        <CustomInputFill name="lastname" text={t.registerAgent.lastname} />
-      ),
+      tag: <CustomInputFill name="lastname" text={t.registerAgent.lastname} />,
       sm: 6,
     },
     {
@@ -51,7 +49,7 @@ const RegisterAgent = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: <CustomInputFill name="agentName" text={t.registerAgent.agentName} />,
+      tag: <CustomInputFill name="company" text={t.registerAgent.agentName} />,
       sm: 6,
     },
     {
@@ -95,7 +93,7 @@ const RegisterAgent = ({ provinceOptions, citiesList }) => {
     lastname: Yup.string().required(t.all.required),
     nationalCode: Yup.number().required(t.all.required),
     mobile: Yup.number().required(t.all.required),
-    agentName: Yup.string().required(t.all.required),
+    company: Yup.string().required(t.all.required),
     email: Yup.string().email().required(t.all.required),
     province: Yup.string().required(t.all.required),
     city: Yup.string().required(t.all.required),
@@ -124,11 +122,12 @@ const RegisterAgent = ({ provinceOptions, citiesList }) => {
     setLoadrefresh(false);
   };
   const initialValuesCreate = {
+    type: "agent",
     firstname: "",
     lastname: "",
     nationalCode: "",
     mobile: "",
-    agentName: "",
+    company: "",
     email: "",
     province: "",
     city: "",

@@ -60,7 +60,7 @@ const Steps = () => {
   const NumberCircle = ({ index }) => {
     return (
       <Box
-        bgcolor="common.white"
+        // bgcolor="common.white"
         position="absolute"
         width={{ md: "70px", sm: "55px", xs: "40px" }}
         height={{ md: "70px", sm: "55px", xs: "40px" }}
@@ -69,6 +69,7 @@ const Steps = () => {
         top={{ md: "-30px", sm: "-23px", xs: "-17px" }}
         borderRadius="50%"
       >
+        <Image src={numberCircle} alt="" width="100%" height="100%" />
         <Typography
           position="absolute"
           color="secondary.main"
@@ -81,7 +82,6 @@ const Steps = () => {
         >
           {index + 1}
         </Typography>
-        <Image src={numberCircle} alt="" width="100%" height="100%" />
       </Box>
     );
   };
@@ -124,7 +124,7 @@ const Steps = () => {
             lg: "h2",
             xs: isMini ? "subtitle5" : "subtitle3",
           },
-          mb:{xs:"30px"}
+          mb: { xs: "30px" },
         }}
         component="h1"
         textAlign="center"

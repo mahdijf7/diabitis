@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import bell from "../../public/images/register/bell.svg";
-import t from "../../public/locales/defualt/common.json";
+import bell from "../../../public/images/register/bell.svg";
+import t from "../../../public/locales/defualt/common.json";
 
 const Bell = () => {
   return (

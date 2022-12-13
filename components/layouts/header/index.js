@@ -42,7 +42,8 @@ export default function Header() {
     },
     {
       label: t.header.news,
-      link: "/news",
+      // link: "/news",
+      link: "/",
       col: 3,
     },
     {

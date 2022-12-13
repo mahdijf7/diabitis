@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import Image from "next/image";
-import ProfileImage from "../../public/images/register/Profile.svg";
+import ProfileImage from "../../../public/images/register/profile.svg";
 
 const Profile = () => {
   return (
