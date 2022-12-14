@@ -9,6 +9,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  IconButton,
 } from "@mui/material";
 import NavBarUpMini from "./NavBarUpMini";
 import NavBarDownMini from "./NavBarDownMini";
@@ -36,15 +37,26 @@ const CustomDrawer = ({ list, useOutsideAlerter, showUpNav }) => {
 
   const DrawerList = () => (
     <Box
-      sx={{ width: 250 }}
+      sx={{ width: { tiny: "250px", xs: "200px" } }}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
+      textAlign="end"
+      m="10px"
     >
+      <IconButton>
+        <Image
+          src="/images/header/close.svg"
+          alt=""
+          loading="lazy"
+          width="28px"
+          height="28px"
+        />
+      </IconButton>
       <List>
         {list.map((el, index) => (
           <ListItem key={index} disablePadding>
-            <ListItemButton>
+            <ListItemButton sx={{ textAlign: "start" }}>
               <ListItemIcon>
                 <Image
                   src={el.icon}
@@ -54,7 +66,15 @@ const CustomDrawer = ({ list, useOutsideAlerter, showUpNav }) => {
                   height="18px"
                 />
               </ListItemIcon>
-              <ListItemText primary={el.label} />
+              <ListItemText
+                primaryTypographyProps={{
+                  typography: { xs: "subtitle5", tiny: "subtitle1" },
+                }}
+                sx={{
+                  color: "common.white",
+                }}
+                primary={el.label}
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -94,6 +114,8 @@ const CustomDrawer = ({ list, useOutsideAlerter, showUpNav }) => {
           open={isOpen}
           onClose={toggleDrawer(false)}
           onOpen={toggleDrawer(true)}
+          transitionDuration={500}
+          sx={{ "& .MuiDrawer-paper": { backgroundColor: "secondary.main" } }}
         >
           <DrawerList />
         </SwipeableDrawer>

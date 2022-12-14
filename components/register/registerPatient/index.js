@@ -49,12 +49,12 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: <CustomInputFill name="idNumber" text={t.register.idNumber} />,
+      tag: <CustomInputFill name="idNumber" text={t.register.idNumber} type="number" />,
       sm: 6,
     },
     {
       tag: (
-        <CustomInputFill name="nationalCode" text={t.register.nationalCode} />
+        <CustomInputFill name="nationalCode" text={t.register.nationalCode} type="number" />
       ),
       sm: 6,
     },
@@ -89,11 +89,11 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: <CustomInputFill name="phone" text={t.register.phone} />,
+      tag: <CustomInputFill name="phone" text={t.register.phone} type="number" />,
       sm: 6,
     },
     {
-      tag: <CustomInputFill name="mobile" text={t.register.mobile} />,
+      tag: <CustomInputFill name="mobile" text={t.register.mobile} type="number" />,
       sm: 6,
     },
     {
@@ -115,7 +115,7 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: <CustomInputFill name="postalCode" text={t.register.postalCode} />,
+      tag: <CustomInputFill name="postalCode" text={t.register.postalCode} type="number" />,
       sm: 6,
     },
     {

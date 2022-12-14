@@ -5,19 +5,30 @@ import { styled } from "@mui/material/styles";
 const TextFieldCustom = styled(TextField)(({ theme }) => ({
   width: "100% !important",
   margin: "15px 0px",
+  "& input[type=number]": {
+    MozAppearance: "textfield",
+  },
+  "& input[type=number]::-webkit-outer-spin-button": {
+    WebkitAppearance: "none",
+    margin: 0,
+  },
+  "& input[type=number]::-webkit-inner-spin-button": {
+    WebkitAppearance: "none",
+    margin: 0,
+  },
   "& .MuiFormLabel-root": {
     right: "20px !important",
     left: "auto !important",
     transformOrigin: "top right !important",
-    fontSize:  "18px" ,
-    '@media (max-width: 420px)' : {
-      fontSize:  "13px" ,
+    fontSize: "18px",
+    "@media (max-width: 420px)": {
+      fontSize: "13px",
     },
-    '@media (min-width: 420px) and (max-width: 600px)' : {
-      fontSize:  "14px" ,
+    "@media (min-width: 420px) and (max-width: 600px)": {
+      fontSize: "14px",
     },
-    '@media (min-width: 600px) and (max-width: 960px)' : {
-      fontSize:  "16px" ,
+    "@media (min-width: 600px) and (max-width: 960px)": {
+      fontSize: "16px",
     },
   },
   "& input": {
@@ -37,10 +48,16 @@ const TextFieldCustom = styled(TextField)(({ theme }) => ({
     },
   },
 }));
-const CustomInputFill = ({ name, disabled, text, multiline, ...otherProps }) => {
+const CustomInputFill = ({
+  name,
+  disabled,
+  text,
+  multiline,
+  ...otherProps
+}) => {
   const [field, meta] = useField(name);
-  field.value = field.value || ""
-  
+  field.value = field.value || "";
+
   const configTextField = {
     ...field,
     ...otherProps,
@@ -60,15 +77,15 @@ const CustomInputFill = ({ name, disabled, text, multiline, ...otherProps }) => 
         disableUnderline: true,
         sx: {
           borderRadius: "10px",
-          fontSize:  "18px" ,
-          '@media (max-width: 420px)' : {
-            fontSize:  "13px" ,
+          fontSize: "18px",
+          "@media (max-width: 420px)": {
+            fontSize: "13px",
           },
-          '@media (min-width: 420px) and (max-width: 600px)' : {
-            fontSize:  "14px" ,
+          "@media (min-width: 420px) and (max-width: 600px)": {
+            fontSize: "14px",
           },
-          '@media (min-width: 600px) and (max-width: 960px)' : {
-            fontSize:  "16px" ,
+          "@media (min-width: 600px) and (max-width: 960px)": {
+            fontSize: "16px",
           },
         },
       }}

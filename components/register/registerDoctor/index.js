@@ -40,12 +40,13 @@ const RegisterDoctor = ({ provinceOptions, citiesList }) => {
         <CustomInputFill
           name="nationalCode"
           text={t.registerDoctor.nationalCode}
+          type="number"
         />
       ),
       sm: 6,
     },
     {
-      tag: <CustomInputFill name="mobile" text={t.registerDoctor.mobile} />,
+      tag: <CustomInputFill name="mobile" text={t.registerDoctor.mobile} type="number" />,
       sm: 6,
     },
     {
@@ -82,6 +83,7 @@ const RegisterDoctor = ({ provinceOptions, citiesList }) => {
         <CustomInputFill
           name="medicalNumber"
           text={t.registerDoctor.medicalNumber}
+          type="number"
         />
       ),
       sm: 6,
