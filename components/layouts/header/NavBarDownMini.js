@@ -4,14 +4,14 @@ import t from "../../../public/locales/defualt/common.json";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useRouter } from "next/router";
 
-const NavBarDownMini = ({ list }) => {
+const NavBarDownMini = ({ handleOpen }) => {
   const isSmall = useMediaQuery("(max-width:420px)");
   const router = useRouter();
   return (
     <Toolbar sx={{ maxHeight: "50px", px: "15px" }}>
       <Grid container columns={12} sx={{ placeItems: "center" }}>
         <Grid item xs={6}>
-          <IconButton>
+          <IconButton onClick={handleOpen}>
             <MenuIcon fontSize={isSmall ? "medium" : "large"} color="info" />
           </IconButton>
         </Grid>

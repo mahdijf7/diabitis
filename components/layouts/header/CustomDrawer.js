@@ -1,23 +1,73 @@
-// import { Button, Grid, IconButton } from "@mui/material";
-// import MenuIcon from "@mui/icons-material/Menu";
-// import logoImage from "../../../public/images/logo/mainReverse.svg";
-// import Image from "next/image";
-// import Link from "next/link";
-import { useEffect, useState, useRef } from "react";
-import { AppBar, Box } from "@mui/material";
+import { useState, useRef } from "react";
+import {
+  AppBar,
+  Box,
+  SwipeableDrawer,
+  Button,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import NavBarUpMini from "./NavBarUpMini";
 import NavBarDownMini from "./NavBarDownMini";
+import Image from "next/image";
 
 const CustomDrawer = ({ list, useOutsideAlerter, showUpNav }) => {
   const wrapperRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
   useOutsideAlerter(wrapperRef);
+
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event &&
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setIsOpen(open);
+  };
+  const handleOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const DrawerList = () => (
+    <Box
+      sx={{ width: 250 }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+    >
+      <List>
+        {list.map((el, index) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <Image
+                  src={el.icon}
+                  alt=""
+                  loading="lazy"
+                  width="18px"
+                  height="18px"
+                />
+              </ListItemIcon>
+              <ListItemText primary={el.label} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
   return (
     <>
       <Box
         ref={wrapperRef}
         display="flex"
-        width={{sm:"95%",xs:"98%"}}
+        width={{ sm: "95%", xs: "98%" }}
         sx={{
           m: "0 auto 55px auto",
           transition: "height 0.25s linear",
@@ -34,8 +84,20 @@ const CustomDrawer = ({ list, useOutsideAlerter, showUpNav }) => {
           boxShadow: "none",
         }}
       >
-        <NavBarDownMini list={list} />
+        <NavBarDownMini handleOpen={handleOpen} />
       </AppBar>
+
+      <div>
+        {/* <Button onClick={() => toggleDrawer(false)}></Button> */}
+        <SwipeableDrawer
+          anchor="right"
+          open={isOpen}
+          onClose={toggleDrawer(false)}
+          onOpen={toggleDrawer(true)}
+        >
+          <DrawerList />
+        </SwipeableDrawer>
+      </div>
     </>
   );
 };
