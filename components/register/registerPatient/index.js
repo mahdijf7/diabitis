@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import t from "../../../public/locales/defualt/common.json";
 import TableFrameRegister from "../../form/TableFrameRegister";
 import SelectWrapper from "../../form/SelectWrapper";
+import UploadButton from "../../form/UploadButton";
 import Bell from "./Bell";
 import SubmitButtonFill from "../../form/SubmitButtonFill";
 import FetchApi from "../../../services/FetchApi";
@@ -23,6 +24,7 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
   const [captchaImage, setCaptchaImage] = useState(null);
   const [hashKey, setHashKey] = useState(null);
   const [cityOptions, setCityOptions] = useState([]);
+  // const [fileUploaded, setFileUploaded] = useState();
 
   const genderOptions = [
     { name: t.register.female, id: "female" },
@@ -49,12 +51,22 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: <CustomInputFill name="idNumber" text={t.register.idNumber} type="number" />,
+      tag: (
+        <CustomInputFill
+          name="idNumber"
+          text={t.register.idNumber}
+          type="number"
+        />
+      ),
       sm: 6,
     },
     {
       tag: (
-        <CustomInputFill name="nationalCode" text={t.register.nationalCode} type="number" />
+        <CustomInputFill
+          name="nationalCode"
+          text={t.register.nationalCode}
+          // type="number"
+        />
       ),
       sm: 6,
     },
@@ -89,11 +101,19 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: <CustomInputFill name="phone" text={t.register.phone} type="number" />,
+      tag: (
+        <CustomInputFill name="phone" text={t.register.phone} type="number" />
+      ),
       sm: 6,
     },
     {
-      tag: <CustomInputFill name="mobile" text={t.register.mobile} type="number" />,
+      tag: (
+        <CustomInputFill
+          name="mobile"
+          text={t.register.mobile}
+          // type="number"
+        />
+      ),
       sm: 6,
     },
     {
@@ -107,7 +127,7 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: "",
+      tag: <UploadButton name="file" text={t.register.attachedFile} />,
       sm: 6,
     },
     {
@@ -115,7 +135,13 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: <CustomInputFill name="postalCode" text={t.register.postalCode} type="number" />,
+      tag: (
+        <CustomInputFill
+          name="postalCode"
+          text={t.register.postalCode}
+          type="number"
+        />
+      ),
       sm: 6,
     },
     {
@@ -157,6 +183,7 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
     mobile: Yup.number().required(t.all.required),
     birthDateAt: Yup.number(),
     email: Yup.string().email().required(t.all.required),
+    file: Yup.mixed().required(t.all.required),
     postalCode: Yup.number().required(t.all.required),
     province: Yup.string().required(t.all.required),
     city: Yup.string().required(t.all.required),
@@ -199,6 +226,7 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
     diabetesType: "",
     email: "",
     postalCode: "",
+    file: "",
     province: "",
     city: "",
     address: "",
@@ -206,11 +234,29 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
   };
 
   const handleSubmit = async (values) => {
-    delete values.countryCode;
-    if (values.birthDateAt == "") delete values.birthDateAt;
     setIsLoading(true);
-    values.hashKey = hashKey;
-    const res = await FetchApi("", "fa", "register", values);
+    const formData = new FormData();
+    if (values.birthDateAt != "")
+      formData.append("birthDateAt", values.birthDateAt);
+    formData.append("firstname", values.firstname);
+    formData.append("lastname", values.lastname);
+    formData.append("idNumber", values.idNumber);
+    formData.append("nationalCode", values.nationalCode);
+    formData.append("fathersName", values.fathersName);
+    formData.append("gender", values.gender);
+    formData.append("phone", values.phone);
+    formData.append("mobile", values.mobile);
+    formData.append("diabetesType", values.diabetesType);
+    formData.append("email", values.email);
+    formData.append("postalCode", values.postalCode);
+    formData.append("province", values.province);
+    formData.append("city", values.city);
+    formData.append("address", values.address);
+    formData.append("code", values.code);
+    formData.append("type", values.type);
+    formData.append("file", values.file);
+    formData.append("hashKey", hashKey);
+    const res = await FetchApi("", "fa", "register", formData);
     setSnackData({
       title: t.all[res.success ? "success" : "error"],
       type: res.success ? "success" : "error",
@@ -285,7 +331,6 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
             <Box
               width="100%"
               display="grid"
-              // justifyContent="center"
               sx={{
                 my: "2%",
                 ml: { sm: "10%" },

@@ -14,6 +14,7 @@ import {
 import NavBarUpMini from "./NavBarUpMini";
 import NavBarDownMini from "./NavBarDownMini";
 import Image from "next/image";
+import Link from "next/link";
 
 const CustomDrawer = ({ list, useOutsideAlerter, showUpNav }) => {
   const wrapperRef = useRef(null);
@@ -56,26 +57,28 @@ const CustomDrawer = ({ list, useOutsideAlerter, showUpNav }) => {
       <List>
         {list.map((el, index) => (
           <ListItem key={index} disablePadding>
-            <ListItemButton sx={{ textAlign: "start" }}>
-              <ListItemIcon>
-                <Image
-                  src={el.icon}
-                  alt=""
-                  loading="lazy"
-                  width="18px"
-                  height="18px"
+            <Link href={el.link}>
+              <ListItemButton sx={{ textAlign: "start" }}>
+                <ListItemIcon>
+                  <Image
+                    src={el.icon}
+                    alt=""
+                    loading="lazy"
+                    width="18px"
+                    height="18px"
+                  />
+                </ListItemIcon>
+                <ListItemText
+                  primaryTypographyProps={{
+                    typography: { xs: "subtitle5", tiny: "subtitle1" },
+                  }}
+                  sx={{
+                    color: "common.white",
+                  }}
+                  primary={el.label}
                 />
-              </ListItemIcon>
-              <ListItemText
-                primaryTypographyProps={{
-                  typography: { xs: "subtitle5", tiny: "subtitle1" },
-                }}
-                sx={{
-                  color: "common.white",
-                }}
-                primary={el.label}
-              />
-            </ListItemButton>
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>

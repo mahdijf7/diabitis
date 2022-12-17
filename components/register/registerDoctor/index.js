@@ -46,7 +46,13 @@ const RegisterDoctor = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: <CustomInputFill name="mobile" text={t.registerDoctor.mobile} type="number" />,
+      tag: (
+        <CustomInputFill
+          name="mobile"
+          text={t.registerDoctor.mobile}
+          type="number"
+        />
+      ),
       sm: 6,
     },
     {
@@ -213,7 +219,6 @@ const RegisterDoctor = ({ provinceOptions, citiesList }) => {
             <Box
               width="100%"
               display="grid"
-              // justifyContent="center"
               sx={{
                 my: "2%",
                 ml: { sm: "10%" },

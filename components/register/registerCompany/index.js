@@ -48,7 +48,13 @@ const RegisterCompany = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: <CustomInputFill name="mobile" text={t.registerCompany.mobile} type="number" />,
+      tag: (
+        <CustomInputFill
+          name="mobile"
+          text={t.registerCompany.mobile}
+          type="number"
+        />
+      ),
       sm: 6,
     },
     {

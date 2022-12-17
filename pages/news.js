@@ -2,8 +2,7 @@
 import Content from "../components/news";
 
 export default function Index() {
-  // return <Content />;
-  return <></>;
+  return <Content />;
 }
 
 export async function getStaticProps() {

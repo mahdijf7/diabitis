@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Card,
   CardActions,
@@ -22,12 +21,13 @@ const CardsCustom = ({ data, isLoading }) => {
   const theme = useTheme();
   const isMatch = useMediaQuery("(max-width:1150px)");
   const isMidle = useMediaQuery("(max-width:850px)");
+  const isSmall = useMediaQuery("(max-width:450px)");
 
   return (
     <Grid container>
       {isLoading
         ? Array.from(new Array(12)).map((el, index) => (
-            <Grid key={index} item md={3} sm={4} xs={12}>
+            <Grid key={index} item md={3} sm={4} tiny={6} xs={12}>
               <Card
                 sx={{
                   boxShadow: theme.customShadows.widget,
@@ -50,6 +50,7 @@ const CardsCustom = ({ data, isLoading }) => {
               item
               md={isMatch ? 4 : 3}
               sm={isMidle ? 6 : 4}
+              tiny={isSmall ? 12 : 6}
               xs={12}
             >
               <Card
@@ -67,10 +68,9 @@ const CardsCustom = ({ data, isLoading }) => {
                   alt=""
                   loading="lazy"
                 />
-                <CardContent sx={{ height: "100px", overflow: "hidden" }}>
+                <CardContent sx={{ height: "70px" }}>
                   <Typography
                     gutterBottom
-                    variant="h5"
                     component="div"
                     sx={{
                       typography: {
@@ -78,6 +78,13 @@ const CardsCustom = ({ data, isLoading }) => {
                         sm: "subtitle6",
                         xs: "subtitle7",
                       },
+                      textAlign: "justify",
+                      textOverflow: "ellipsis",
+                      overflow: "hidden",
+                      whiteSpace: "wrap",
+                      display: "-webkit-box",
+                      WebkitBoxOrient: "vertical",
+                      WebkitLineClamp: 2,
                     }}
                   >
                     {el.title}

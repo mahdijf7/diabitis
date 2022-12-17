@@ -10,10 +10,10 @@ const Profile = () => {
         sx={{
           ml: { sm: "5%" },
           alignItems: "center",
-          justifyContent: "center"
+          justifyContent: "center",
         }}
       >
-          <Image src={ProfileImage} alt="Profile" />
+        <Image src={ProfileImage} alt="Profile" />
       </Box>
     </Box>
   );

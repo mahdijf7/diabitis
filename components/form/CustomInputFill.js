@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 
 const TextFieldCustom = styled(TextField)(({ theme }) => ({
   width: "100% !important",
+  minWidth: "100px !important",
   margin: "15px 0px",
   "& input[type=number]": {
     MozAppearance: "textfield",
@@ -20,16 +21,7 @@ const TextFieldCustom = styled(TextField)(({ theme }) => ({
     right: "20px !important",
     left: "auto !important",
     transformOrigin: "top right !important",
-    fontSize: "18px",
-    "@media (max-width: 420px)": {
-      fontSize: "13px",
-    },
-    "@media (min-width: 420px) and (max-width: 600px)": {
-      fontSize: "14px",
-    },
-    "@media (min-width: 600px) and (max-width: 960px)": {
-      fontSize: "16px",
-    },
+    fontSize: "14px",
   },
   "& input": {
     "&:-webkit-autofill": {
@@ -63,7 +55,7 @@ const CustomInputFill = ({
     ...otherProps,
     disabled: !!disabled,
     fullWidth: true,
-    variant: "filled", //outlined
+    variant: "filled",
     label: text,
     multiline: !!multiline,
   };
@@ -75,19 +67,6 @@ const CustomInputFill = ({
     <TextFieldCustom
       InputProps={{
         disableUnderline: true,
-        sx: {
-          borderRadius: "10px",
-          fontSize: "18px",
-          "@media (max-width: 420px)": {
-            fontSize: "13px",
-          },
-          "@media (min-width: 420px) and (max-width: 600px)": {
-            fontSize: "14px",
-          },
-          "@media (min-width: 600px) and (max-width: 960px)": {
-            fontSize: "16px",
-          },
-        },
       }}
       {...configTextField}
     />

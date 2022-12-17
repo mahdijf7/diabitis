@@ -3,7 +3,6 @@ import CustomDrawer from "./CustomDrawer";
 import CustomNavbar from "./CustomNavbar";
 import t from "../../../public/locales/defualt/common.json";
 import { useEffect, useState } from "react";
-// import style from "../../../styles/Header.module.scss";
 
 export default function Header() {
   const theme = useTheme();
@@ -46,7 +45,7 @@ export default function Header() {
     {
       label: t.header.news,
       // link: "/news",
-      link: "/",
+      link: "/news",
       col: 3,
       icon: "/images/header/news.svg",
     },
@@ -68,36 +67,6 @@ export default function Header() {
       col: 3,
       icon: "/images/header/memberShip.svg",
     },
-    // {
-    //   label: t.header.request,
-    //   link: "/",
-    //   col: 4,
-    // },
-    // {
-    //   label: t.header.group,
-    //   link: "/",
-    //   col: 3,
-    // },
-    // {
-    //   label: t.header.center,
-    //   link: "/",
-    //   col: 4,
-    // },
-    // {
-    //   label: t.header.report,
-    //   link: "/",
-    //   col: 3,
-    // },
-    // {
-    //   label: t.header.rule,
-    //   link: "/",
-    //   col: 4,
-    // },
-    // {
-    //   label: t.header.contact,
-    //   link: "/",
-    //   col: 3,
-    // },
   ];
   return (
     <Container disableGutters maxWidth={false}>

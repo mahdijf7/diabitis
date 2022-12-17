@@ -25,7 +25,6 @@ const TextFieldCustom = styled(TextField)(({ theme }) => ({
     paddingBottom: "22px",
     paddingTop: "22px",
     "&::placeholder": {
-      // textOverflow: 'ellipsis !important',
       color: theme.palette.common.black,
       opacity: 1,
     },
@@ -33,13 +32,13 @@ const TextFieldCustom = styled(TextField)(({ theme }) => ({
 }));
 const CustomInputFillLogin = ({ name, disabled, t }) => {
   const [field, meta] = useField(name);
-  field.value = field.value || ""
-  
+  field.value = field.value || "";
+
   const configTextField = {
     ...field,
     disabled: !!disabled,
     fullWidth: true,
-    variant: "filled", //outlined
+    variant: "filled",
     placeholder: t,
   };
   if (meta && meta.error && meta.touched) {
@@ -51,17 +50,8 @@ const CustomInputFillLogin = ({ name, disabled, t }) => {
       InputProps={{
         disableUnderline: true,
         sx: {
-          borderRadius: "10px",
-          fontSize: "18px",
-          "@media (max-width: 420px)": {
-            fontSize: "13px",
-          },
-          "@media (min-width: 420px) and (max-width: 600px)": {
-            fontSize: "14px",
-          },
-          "@media (min-width: 600px) and (max-width: 960px)": {
-            fontSize: "16px",
-          },
+          borderRadius: "8px",
+          fontSize: "14px",
         },
       }}
       {...configTextField}

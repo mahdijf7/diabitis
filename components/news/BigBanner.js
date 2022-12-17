@@ -1,14 +1,22 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Typography,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import t from "../../public/locales/defualt/common.json";
 
 const BigBanner = () => {
+  const theme = useTheme();
+  const isMatch = useMediaQuery("(max-width:1100px)");
   return (
     <Container
       disableGutters
       maxWidth={false}
       sx={{
-        // width: "100%",
-        height: { md: "419px", sm: "270px", xs: "170px" },
+        height: isMatch ? "350px" : "419px",
         backgroundImage: "url(/images/news/bigBanner.png)",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -28,6 +36,14 @@ const BigBanner = () => {
           mr="5%"
           mb="7%"
           typography={{ md: "subtitle3", sm: "subtitle6", xs: "subtitle7" }}
+          // sx={{
+            // textOverflow: "ellipsis",
+            // overflow: "hidden",
+            // display: "-webkit-box",
+            // whiteSpace: "wrap",
+            // WebkitBoxOrient: "vertical",
+            // WebkitLineClamp: 3,
+          // }}
         >
           {t.news.bigbannerDes}
         </Typography>
@@ -49,10 +65,6 @@ const BigBanner = () => {
           </Typography>
         </Button>
       </Box>
-      {/* <img
-        style={{ width: "100%", minHeight: "250px" }}
-        src="/images/news/bigBanner.png"
-      /> */}
     </Container>
   );
 };

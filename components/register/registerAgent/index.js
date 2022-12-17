@@ -46,7 +46,13 @@ const RegisterAgent = ({ provinceOptions, citiesList }) => {
       sm: 6,
     },
     {
-      tag: <CustomInputFill name="mobile" text={t.registerAgent.mobile} type="number" />,
+      tag: (
+        <CustomInputFill
+          name="mobile"
+          text={t.registerAgent.mobile}
+          type="number"
+        />
+      ),
       sm: 6,
     },
     {
@@ -212,7 +218,6 @@ const RegisterAgent = ({ provinceOptions, citiesList }) => {
             <Box
               width="100%"
               display="grid"
-              // justifyContent="center"
               sx={{
                 my: "2%",
                 ml: { sm: "10%" },

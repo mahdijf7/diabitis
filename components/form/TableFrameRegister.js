@@ -1,12 +1,4 @@
-import {
-  Paper,
-  Box,
-  TableContainer,
-  CircularProgress,
-  Typography,
-  Grid,
-  useTheme,
-} from "@mui/material";
+import { Paper, Box, TableContainer, Grid, useTheme } from "@mui/material";
 
 const TableFrameRegister = ({ children }) => {
   const theme = useTheme();
