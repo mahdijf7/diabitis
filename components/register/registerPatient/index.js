@@ -65,7 +65,7 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
         <CustomInputFill
           name="nationalCode"
           text={t.register.nationalCode}
-          // type="number"
+          type="number"
         />
       ),
       sm: 6,
@@ -111,7 +111,7 @@ const RegisterPatient = ({ provinceOptions, citiesList }) => {
         <CustomInputFill
           name="mobile"
           text={t.register.mobile}
-          // type="number"
+          type="number"
         />
       ),
       sm: 6,

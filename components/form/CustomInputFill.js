@@ -1,6 +1,7 @@
 import { TextField } from "@mui/material";
 import { useField } from "formik";
 import { styled } from "@mui/material/styles";
+import { useFormikContext } from "formik";
 
 const TextFieldCustom = styled(TextField)(({ theme }) => ({
   width: "100% !important",
@@ -48,7 +49,12 @@ const CustomInputFill = ({
   ...otherProps
 }) => {
   const [field, meta] = useField(name);
+  const { setFieldValue } = useFormikContext();
   field.value = field.value || "";
+
+  const handleChange = (event) => {
+    setFieldValue(name, event.target.value);
+  };
 
   const configTextField = {
     ...field,
@@ -58,6 +64,7 @@ const CustomInputFill = ({
     variant: "filled",
     label: text,
     multiline: !!multiline,
+    onChange: handleChange,
   };
   if (meta && meta.error && meta.touched) {
     configTextField.error = true;
