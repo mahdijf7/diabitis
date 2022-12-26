@@ -16,7 +16,7 @@ const RegisterMini = () => {
           <Box display="flex" alignItems="center">
             <Box ml="10px" mt="4px">
               <Image
-                src={"/images/home/addUser.svg"}
+                src={"/images/home/joinUser.svg"}
                 width="20px"
                 height="20px"
                 loading="lazy"
@@ -33,7 +33,7 @@ const RegisterMini = () => {
           <Box display="flex" alignItems="center">
             <Box ml="10px" mt="4px">
               <Image
-                src={"/images/home/joinUser.svg"}
+                src={"/images/home/addUser.svg"}
                 width="20px"
                 height="20px"
                 loading="lazy"

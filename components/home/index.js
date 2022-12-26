@@ -10,6 +10,7 @@ import Device from "./Device";
 import Account from "./Account";
 import DeviceMini from "./DeviceMini";
 import AccountMini from "./AccountMini";
+import RegisterMini from "./RegisterMini";
 
 export default function Home() {
   const theme = useTheme();
@@ -19,7 +20,7 @@ export default function Home() {
       {isMatch ? (
         <>
           <SinglePageCrouselMini />
-          {/* <RegisterMini /> */}
+          <RegisterMini />
           <MultiplePagesCrouselMini />
           <DeviceMini />
           <VideoBanner />

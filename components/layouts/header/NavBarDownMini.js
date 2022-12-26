@@ -16,14 +16,14 @@ const NavBarDownMini = ({ handleOpen }) => {
           </IconButton>
         </Grid>
         <Grid item xs={6} display="flex" justifyContent="flex-end">
-          <CustomButton
+          {/* <CustomButton
             onClick={() => {
               router.push("/login");
             }}
             text={t.header.test}
             font="mini"
             padd={{ xs: "5px 10px", sm: "5px 21px" }}
-          />
+          /> */}
         </Grid>
       </Grid>
     </Toolbar>

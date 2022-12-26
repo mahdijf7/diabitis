@@ -3,6 +3,7 @@ import CustomButton from "../../utiles/CustomButton";
 import t from "../../../public/locales/defualt/common.json";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 
 const NavBarDown = ({ maxWidth, list }) => {
   const router = useRouter();
@@ -28,13 +29,51 @@ const NavBarDown = ({ maxWidth, list }) => {
               </Grid>
             </Link>
           ))}
-          <Grid item xs={11} display="flex" justifyContent="flex-end">
+          <Grid
+            item
+            xs={11}
+            display="flex"
+            justifyContent="flex-end"
+            >
             <CustomButton
+              mx={{lg:"20px", xs:"8px"}}
+              width="160px"
               onClick={() => {
-                // router.push("/login");
-                router.push("/");
+                router.push("/login");
               }}
-              text={t.header.test}
+              text={
+                <Box display="flex" alignItems="center">
+                  <Box ml="10px" mt="6px">
+                    <Image
+                      src={"/images/home/addUser.svg"}
+                      width="20px"
+                      height="20px"
+                      loading="lazy"
+                    />
+                  </Box>
+                  {t.header.memberShip}
+                </Box>
+              }
+            />
+            <CustomButton
+              width="160px"
+              padd="0px"
+              onClick={() => {
+                router.push("/login");
+              }}
+              text={
+                <Box display="flex" alignItems="center">
+                  <Box ml="10px" mt="6px">
+                    <Image
+                      src={"/images/home/joinUser.svg"}
+                      width="20px"
+                      height="20px"
+                      loading="lazy"
+                    />
+                  </Box>
+                  {t.header.login}
+                </Box>
+              }
             />
           </Grid>
         </Grid>
