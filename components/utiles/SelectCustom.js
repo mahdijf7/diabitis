@@ -7,7 +7,7 @@ import * as Yup from "yup";
 import { useRouter } from "next/router";
 import SubmitButtonFill from "../form/SubmitButtonFill";
 
-const SelectCustom = () => {
+const SelectCustom = ({noClass}) => {
   const router = useRouter();
   const memberOptions = [
     { name: t.home.patient, id: "patient" },
@@ -26,7 +26,7 @@ const SelectCustom = () => {
     router.push(`/register/${values.member}`);
   };
   return (
-    <Box className={style.boxButton}>
+    <Box className={noClass ? "" : style.boxButton  }>
       <Box
         sx={{
           width: { lg: "300px", md: "260px", sm: "280px", xs: "100%" },
