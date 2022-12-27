@@ -1,7 +1,7 @@
 import { TextField, MenuItem, useTheme } from "@mui/material";
 import { useField, useFormikContext } from "formik";
 
-const SelectWrapper = ({ name, options, text, setProvince, ...otherProps }) => {
+const SelectWrapper = ({ name, options, text, setProvince, setTypeSelected, ...otherProps }) => {
   const theme = useTheme();
   const { setFieldValue } = useFormikContext();
   const [field, meta] = useField(name);
@@ -13,6 +13,9 @@ const SelectWrapper = ({ name, options, text, setProvince, ...otherProps }) => {
     if (setProvince) {
       setFieldValue("city", "");
       setProvince(value);
+    }
+    if (setTypeSelected){
+      setTypeSelected(value)
     }
   };
   const configTextField = {
@@ -70,6 +73,8 @@ const SelectWrapper = ({ name, options, text, setProvince, ...otherProps }) => {
           paddingRight: "10px !important",
           backgroundColor: theme.palette.primary.light,
           borderRadius: "8px",
+          height:{xs:"10px",tiny:"15px",sm:"auto"},
+          minHeight:"10px",
           "&:focus": {
             backgroundColor: theme.palette.primary.light,
             borderRadius: "8px",

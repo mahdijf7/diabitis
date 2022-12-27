@@ -7,7 +7,7 @@ import * as Yup from "yup";
 import { useRouter } from "next/router";
 import SubmitButtonFill from "../form/SubmitButtonFill";
 
-const SelectCustom = ({noClass}) => {
+const SelectCustom = ({noClass,setTypeSelected}) => {
   const router = useRouter();
   const memberOptions = [
     { name: t.home.patient, id: "patient" },
@@ -29,7 +29,7 @@ const SelectCustom = ({noClass}) => {
     <Box className={noClass ? "" : style.boxButton  }>
       <Box
         sx={{
-          width: { lg: "300px", md: "260px", sm: "280px", xs: "100%" },
+          width: { lg: "300px", md: "260px", sm: "280px", xs: "220px" },
           m: "auto",
         }}
       >
@@ -43,6 +43,7 @@ const SelectCustom = ({noClass}) => {
               name="member"
               options={memberOptions}
               text={t.home.membershipType}
+              setTypeSelected={setTypeSelected || null}
             />
             <SubmitButtonFill fullWidth={true}>
               <Typography

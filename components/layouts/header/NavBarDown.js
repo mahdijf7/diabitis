@@ -31,7 +31,7 @@ const NavBarDown = ({ maxWidth, list }) => {
           ))}
           <Grid
             item
-            xs={11}
+            xs={14}
             display="flex"
             justifyContent="flex-end"
             >
@@ -39,7 +39,7 @@ const NavBarDown = ({ maxWidth, list }) => {
               mx={{lg:"20px", xs:"8px"}}
               width="160px"
               onClick={() => {
-                router.push("/login");
+                router.push("/register");
               }}
               text={
                 <Box display="flex" alignItems="center">

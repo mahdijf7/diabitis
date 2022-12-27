@@ -61,12 +61,12 @@ export default function Header() {
       col: 3,
       icon: "/images/header/aboutUs.svg",
     },
-    {
-      label: t.header.memberShip,
-      link: "/",
-      col: 3,
-      icon: "/images/header/memberShip.svg",
-    },
+    // {
+    //   label: t.header.memberShip,
+    //   link: "/",
+    //   col: 3,
+    //   icon: "/images/header/memberShip.svg",
+    // },
   ];
   return (
     <Container disableGutters maxWidth={false}>
