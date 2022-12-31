@@ -76,8 +76,8 @@ const Device = () => {
           >
             {t.home.deviceDes2}
           </Typography>
-          <Box display="flex" justifyContent="end" alignItems="center" mt={2}>
-            <Link href="/#">
+          <Link href="/diabetes">
+            <Box display="flex" justifyContent="end" alignItems="center" mt={2}>
               <Typography
                 variant="subtitle5"
                 component="h1"
@@ -86,19 +86,19 @@ const Device = () => {
               >
                 {t.home.moreText}
               </Typography>
-            </Link>
-            <Link href="/#">
               <Button
                 sx={{
                   p: 0,
-                  minWidth: "30px",
+                  maxWidth:{md:"20px",xs:"10px"},
+                  minWidth: "20px",
+                  height:"10px",
                   "&:hover": { backgroundColor: "common.white" },
                 }}
               >
                 <Image src={dubleArrow} loading="lazy" />
               </Button>
-            </Link>
-          </Box>
+            </Box>
+          </Link>
         </Box>
         <Box position="absolute" sx={{ left: "4%", width: "50%" }}>
           <Image src={device} loading="lazy" />

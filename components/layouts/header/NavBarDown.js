@@ -4,6 +4,7 @@ import t from "../../../public/locales/defualt/common.json";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
+import SelectLanguage from "./SelectLanguage";
 
 const NavBarDown = ({ maxWidth, list }) => {
   const router = useRouter();
@@ -29,14 +30,10 @@ const NavBarDown = ({ maxWidth, list }) => {
               </Grid>
             </Link>
           ))}
-          <Grid
-            item
-            xs={14}
-            display="flex"
-            justifyContent="flex-end"
-            >
+          <Grid item xs={14} display="flex" justifyContent="flex-end">
+            <SelectLanguage />
             <CustomButton
-              mx={{lg:"20px", xs:"8px"}}
+              mx="15px"
               width="160px"
               onClick={() => {
                 router.push("/register");
