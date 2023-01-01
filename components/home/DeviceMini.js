@@ -81,8 +81,8 @@ const DeviceMini = () => {
           >
             {t.home.deviceDes2}
           </Typography>
-          <Box display="flex" justifyContent="end" alignItems="center" mt={2}>
-            <Link href="/#">
+          <Link href="/diabetes">
+            <Box display="flex" justifyContent="end" alignItems="center" mt={2}>
               <Typography
                 sx={{
                   cursor: "pointer",
@@ -93,8 +93,6 @@ const DeviceMini = () => {
               >
                 {t.home.moreText}
               </Typography>
-            </Link>
-            <Link href="/#">
               <IconButton
                 sx={{
                   p: 0,
@@ -105,13 +103,17 @@ const DeviceMini = () => {
               >
                 <Image src={dubleArrow} loading="lazy" />
               </IconButton>
-            </Link>
-          </Box>
+            </Box>
+          </Link>
         </Box>
       </Box>
       <Box
         position="relative"
-        mt={{ sm: "-13%", tiny: isSmall ? "-40%" :isMid?"-25%": "-15%", xs: "-35%" }}
+        mt={{
+          sm: "-13%",
+          tiny: isSmall ? "-40%" : isMid ? "-25%" : "-15%",
+          xs: "-35%",
+        }}
         zIndex="-1"
       >
         <Image
